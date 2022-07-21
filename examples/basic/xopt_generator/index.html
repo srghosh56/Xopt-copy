@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
     
     
       
@@ -335,6 +335,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xopt_vocs/" class="md-nav__link">
+        VOCS data structure
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -530,7 +544,54 @@
   
     <li class="md-nav__item">
       <a href="../../cnsga/cnsga_tnk/" class="md-nav__link">
-        Plot
+        Xopt CNSGA algorithm
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          SciPy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="SciPy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          SciPy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scipy/neldermead/" class="md-nav__link">
+        Nelder-Mead Generator adapted from SciPy
       </a>
     </li>
   
@@ -682,6 +743,20 @@
     <li class="md-nav__item">
       <a href="../../../api/generators/genetic/" class="md-nav__link">
         Genetic generators
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../api/generators/scipy/" class="md-nav__link">
+        SciPy generators
       </a>
     </li>
   
@@ -1867,7 +1942,7 @@ generators.keys()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>dict_keys([&#39;upper_confidence_bound&#39;, &#39;mobo&#39;, &#39;bayesian_exploration&#39;, &#39;cnsga&#39;, &#39;random&#39;])</pre>
+<pre>dict_keys([&#39;upper_confidence_bound&#39;, &#39;mobo&#39;, &#39;bayesian_exploration&#39;, &#39;cnsga&#39;, &#39;random&#39;, &#39;neldermead&#39;])</pre>
 </div>
 
 </div>
@@ -2220,8 +2295,10 @@ for i in range(4):
 torch.linalg.solve_triangular has its arguments reversed and does not return a copy of one of the inputs.
 X = torch.triangular_solve(B, A).solution
 should be replaced with
-X = torch.linalg.solve_triangular(A, B). (Triggered internally at  /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1654951030282/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:1666.)
+X = torch.linalg.solve_triangular(A, B). (Triggered internally at  /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1658220911323/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2183.)
   Linv = torch.triangular_solve(Eye, L, upper=False).solution
+/usr/share/miniconda/envs/xopt-dev/lib/python3.9/site-packages/gpytorch/utils/cholesky.py:40: NumericalWarning: A not p.d., added jitter of 1.0e-08 to the diagonal
+  warnings.warn(
 /usr/share/miniconda/envs/xopt-dev/lib/python3.9/site-packages/gpytorch/utils/cholesky.py:40: NumericalWarning: A not p.d., added jitter of 1.0e-08 to the diagonal
   warnings.warn(
 </pre>
@@ -2306,15 +2383,15 @@ X = torch.linalg.solve_triangular(A, B). (Triggered internally at  /home/conda/f
   <tbody>
     <tr>
       <th>1</th>
-      <td>3.403767</td>
-      <td>-2.591815e-01</td>
+      <td>2.945434</td>
+      <td>1.949034e-01</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>2</th>
-      <td>6.283185</td>
-      <td>-2.449294e-16</td>
+      <td>4.890539</td>
+      <td>-9.841732e-01</td>
       <td>False</td>
       <td></td>
     </tr>
@@ -2327,8 +2404,8 @@ X = torch.linalg.solve_triangular(A, B). (Triggered internally at  /home/conda/f
     </tr>
     <tr>
       <th>4</th>
-      <td>4.478974</td>
-      <td>-9.728823e-01</td>
+      <td>6.283185</td>
+      <td>-2.449294e-16</td>
       <td>False</td>
       <td></td>
     </tr>
@@ -2457,7 +2534,7 @@ X = torch.linalg.solve_triangular(A, B). (Triggered internally at  /home/conda/f
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
       
     
   </body>
