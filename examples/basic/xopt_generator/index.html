@@ -1942,7 +1942,7 @@ generators.keys()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>dict_keys([&#39;upper_confidence_bound&#39;, &#39;mobo&#39;, &#39;bayesian_exploration&#39;, &#39;cnsga&#39;, &#39;random&#39;, &#39;neldermead&#39;])</pre>
+<pre>dict_keys([&#39;upper_confidence_bound&#39;, &#39;mobo&#39;, &#39;bayesian_exploration&#39;, &#39;cnsga&#39;, &#39;random&#39;, &#39;neldermead&#39;, &#39;time_dependent_upper_confidence_bound&#39;])</pre>
 </div>
 
 </div>
@@ -2119,7 +2119,7 @@ generator.options</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>UCBOptions(optim=OptimOptions(num_restarts=5, raw_samples=20, sequential=True), acq=UpperConfidenceBoundOptions(proximal_lengthscales=None, monte_carlo_samples=512, beta=1.0), model=ModelOptions(use_conservative_prior_lengthscale=False, use_conservative_prior_mean=False, use_low_noise_prior=False), n_initial=1)</pre>
+<pre>UCBOptions(optim=OptimOptions(num_restarts=5, raw_samples=20, sequential=True, use_nearby_initial_points=True), acq=UpperConfidenceBoundOptions(proximal_lengthscales=None, monte_carlo_samples=128, beta=1.0), model=ModelOptions(use_conservative_prior_lengthscale=False, use_conservative_prior_mean=False, use_low_noise_prior=False), n_initial=1)</pre>
 </div>
 
 </div>
@@ -2297,10 +2297,6 @@ X = torch.triangular_solve(B, A).solution
 should be replaced with
 X = torch.linalg.solve_triangular(A, B). (Triggered internally at  /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1658220911323/work/aten/src/ATen/native/BatchLinearAlgebra.cpp:2183.)
   Linv = torch.triangular_solve(Eye, L, upper=False).solution
-/usr/share/miniconda/envs/xopt-dev/lib/python3.9/site-packages/gpytorch/utils/cholesky.py:40: NumericalWarning: A not p.d., added jitter of 1.0e-08 to the diagonal
-  warnings.warn(
-/usr/share/miniconda/envs/xopt-dev/lib/python3.9/site-packages/gpytorch/utils/cholesky.py:40: NumericalWarning: A not p.d., added jitter of 1.0e-08 to the diagonal
-  warnings.warn(
 </pre>
 </div>
 </div>
@@ -2383,29 +2379,29 @@ X = torch.linalg.solve_triangular(A, B). (Triggered internally at  /home/conda/f
   <tbody>
     <tr>
       <th>1</th>
-      <td>2.945434</td>
-      <td>1.949034e-01</td>
+      <td>5.119698</td>
+      <td>-9.181903e-01</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>2</th>
-      <td>4.890539</td>
-      <td>-9.841732e-01</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>0.000000</td>
       <td>0.000000e+00</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>3</th>
       <td>6.283185</td>
       <td>-2.449294e-16</td>
+      <td>False</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3.807972</td>
+      <td>-6.181441e-01</td>
       <td>False</td>
       <td></td>
     </tr>
