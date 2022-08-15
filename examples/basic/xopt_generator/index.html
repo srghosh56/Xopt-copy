@@ -475,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bayes_opt/bayesian_optimization/" class="md-nav__link">
+      <a href="../../bayes_opt/upper_confidence_bound_tnk/" class="md-nav__link">
         Upper Confidence Bound BO
       </a>
     </li>
@@ -1942,7 +1942,7 @@ generators.keys()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>dict_keys([&#39;upper_confidence_bound&#39;, &#39;mobo&#39;, &#39;bayesian_exploration&#39;, &#39;cnsga&#39;, &#39;random&#39;, &#39;neldermead&#39;, &#39;time_dependent_upper_confidence_bound&#39;])</pre>
+<pre>dict_keys([&#39;upper_confidence_bound&#39;, &#39;mobo&#39;, &#39;bayesian_exploration&#39;, &#39;cnsga&#39;, &#39;random&#39;, &#39;neldermead&#39;, &#39;time_dependent_upper_confidence_bound&#39;, &#39;expected_improvement&#39;])</pre>
 </div>
 
 </div>
@@ -2119,7 +2119,7 @@ generator.options</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>UCBOptions(optim=OptimOptions(num_restarts=5, raw_samples=20, sequential=True, use_nearby_initial_points=True), acq=UpperConfidenceBoundOptions(proximal_lengthscales=None, use_transformed_proximal_weights=True, monte_carlo_samples=128, beta=1.0), model=ModelOptions(use_conservative_prior_lengthscale=False, use_conservative_prior_mean=False, use_low_noise_prior=False), n_initial=1)</pre>
+<pre>UCBOptions(optim=OptimOptions(num_restarts=5, raw_samples=20, sequential=True, use_nearby_initial_points=True, max_travel_distances=None), acq=UpperConfidenceBoundOptions(proximal_lengthscales=None, use_transformed_proximal_weights=True, monte_carlo_samples=128, beta=1.0), model=ModelOptions(use_conservative_prior_lengthscale=False, use_conservative_prior_mean=False, use_low_noise_prior=False), n_initial=1)</pre>
 </div>
 
 </div>
@@ -2228,7 +2228,7 @@ X.options</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_2736/4261639536.py:4: DeprecationWarning: `copy_on_model_validation` should be a string: &#39;deep&#39;, &#39;shallow&#39; or &#39;none&#39;
+<pre>/tmp/ipykernel_3229/4261639536.py:4: DeprecationWarning: `copy_on_model_validation` should be a string: &#39;deep&#39;, &#39;shallow&#39; or &#39;none&#39;
   evaluator = Evaluator(function=test_function)
 </pre>
 </div>
@@ -2364,29 +2364,29 @@ for i in range(4):
   <tbody>
     <tr>
       <th>1</th>
-      <td>1.431667</td>
-      <td>9.903371e-01</td>
+      <td>6.020974</td>
+      <td>-0.259217</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>2</th>
-      <td>6.283185</td>
-      <td>-2.449294e-16</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.808252</td>
-      <td>-9.954087e-01</td>
+      <td>4.203441</td>
+      <td>-0.873257</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>4</th>
-      <td>4.117487</td>
-      <td>-8.282034e-01</td>
+      <td>3.240177</td>
+      <td>-0.098425</td>
       <td>False</td>
       <td></td>
     </tr>
