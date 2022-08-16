@@ -1013,6 +1013,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight-ipynb .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight-ipynb .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight-ipynb .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
+.highlight-ipynb .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight-ipynb .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight-ipynb .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight-ipynb .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -2282,7 +2283,7 @@ X._input_data</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_3253/2430900159.py:1: DeprecationWarning: `copy_on_model_validation` should be a string: &#39;deep&#39;, &#39;shallow&#39; or &#39;none&#39;
+<pre>/tmp/ipykernel_3557/2430900159.py:1: DeprecationWarning: `copy_on_model_validation` should be a string: &#39;deep&#39;, &#39;shallow&#39; or &#39;none&#39;
   X = Xopt(generator=RandomGenerator(vocs), evaluator=Evaluator(function=f), vocs=vocs)
 </pre>
 </div>
@@ -3096,7 +3097,7 @@ executor</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;concurrent.futures.process.ProcessPoolExecutor at 0x7f9444229130&gt;</pre>
+<pre>&lt;concurrent.futures.process.ProcessPoolExecutor at 0x7f25d78c5fd0&gt;</pre>
 </div>
 
 </div>
@@ -3161,7 +3162,7 @@ X2.options.asynch = True</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>/tmp/ipykernel_3253/1397093078.py:3: DeprecationWarning: `copy_on_model_validation` should be a string: &#39;deep&#39;, &#39;shallow&#39; or &#39;none&#39;
+<pre>/tmp/ipykernel_3557/1397093078.py:3: DeprecationWarning: `copy_on_model_validation` should be a string: &#39;deep&#39;, &#39;shallow&#39; or &#39;none&#39;
   evaluator=Evaluator(function=f, executor=executor, max_workers=MAX_WORKERS),
 </pre>
 </div>
@@ -3267,7 +3268,7 @@ X2.options.asynch = True</div>
 
 
 <div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAEGCAYAAABo25JHAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjUuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8qNh9FAAAACXBIWXMAAAsTAAALEwEAmpwYAAAU3UlEQVR4nO3df6zddX3H8ee7pRS2Etu11ZH+WJngj2YrRK9g7JYhZpOyBeIwGeA0EhOCs87/WrNs7g+XTUiWqQFtGkaIf2xksUTqghIT4o/IcNwm5SIQXYeRXnCxVPxRpaXlvvfHOdeeHm5vzy33++t8no+k4Z7z/ba8zzf3e17fz/fz4xuZiSSpXEuaLkCS1CyDQJIKZxBIUuEMAkkqnEEgSYU7p+kCFmrNmjW5adOmpsuQpE7Zt2/f85m5dq5tnQuCTZs2MTk52XQZktQpEfHD023z1pAkFc4gkKTCGQSSVDiDQJIKZxBIUuEqC4KIuDsifhwR3z3N9oiIz0bEgYiYioi3VFWLpHocPnKMxw7+lMNHjjVdihagyuGj9wB3AF84zfZtwCX9P1cAn+//V+qMw0eOMf3Ci6xfdT6rVyxvupxG3b//WXbumWLZkiUcn5nh9uu3cO1l65ouSyOoLAgy85sRsWmeXa4DvpC9dbAfiYiVEXFhZv6oqpqkxeQX30mHjxxj554pjh6f4SgzAOzYM8XWi9cUH5Bd0GQfwTrg4MDr6f57rxARt0TEZERMHjp0qJbipPkMfvH94tgJjh6fYceeqWJviUy/8CLLlpz6dbJsyRKmX3ixoYq0EE0GQczx3pxPycnM3Zk5kZkTa9fOOUNaqpVffKdav+p8js/MnPLe8ZkZ1q86v6GKtBBNBsE0sGHg9XrguYZqkRbEL75TrV6xnNuv38J5y5ZwwfJzOG/ZEm6/fou3hTqiybWG9gLbI+Jeep3EP7N/QF0x+8W3Y6iPoOQvvmsvW8fWi9fYed5BlQVBRPw7cCWwJiKmgb8HlgFk5i7gAeAa4ADwK+DmqmqRquAX3yutXrHc49BBVY4auvEM2xP4SFX/f6kOfvFpHDizWJIKZxBIUuEMAkkqnEEgSYUzCCSpcAaBJBXOIJCkwhkEklQ4g0A6DR+yolI0udaQ1Fo+a0AlsUUgDfFZAyqNQSAN8VkDKo1BIA3xWQMqjUEgDfEhKyqNncXSHHzWgEpiEEin4bMGVIpibw05RlySeopsEThGXCrL4SPHOn+br8rPUFwQDI4RP0pvZMiOPVNsvXhNZ39BJJ3eOFz4Vf0Zirs15BhxqRzjMDmwjs9QXBA4Rlwqxzhc+NXxGYoLAseIS+UYhwu/Oj5DcX0E4BhxqRSzF347hu6vd+mcr+MzRGYu2j9Wh4mJiZycnGy6DEkd4qghiIh9mTkx17YiWwSSyjIOkwOr/AzF9RFIkk5lEEhS4QwCSSqcQSBJhTMIpI5zAUW9Wo4akjpsHNbRUfMqbRFExNUR8b2IOBARH59j+2si4ssR8VhEPBERN1dZjzROxmEdHbVDZUEQEUuBO4FtwGbgxojYPLTbR4AnM/NS4ErgnyPi3KpqksbJOKyjo3aoskVwOXAgM5/OzJeAe4HrhvZJ4IKICGAF8BPgRIU1SWNjHNbRUTtUGQTrgIMDr6f77w26A3gz8BzwOPCxzJwZ2oeIuCUiJiNi8tChQ1XVK3WKCyhqsVTZWRxzvDe8sNG7gf3AVcDrga9FxLcy8+en/KXM3cBu6K01tPilSt3kAopaDFW2CKaBDQOv19O78h90M3Bf9hwAfgC8qcKapLGzesVyLt2w0hDQWasyCB4FLomIi/odwDcAe4f2eQZ4F0BEvA54I/B0hTVJkoZUdmsoM09ExHbgQWApcHdmPhERt/a37wI+CdwTEY/Tu5W0MzOfr6omSdIrVTqhLDMfAB4Yem/XwM/PAX9SZQ2SpPkVs8SE0/AlaW5FLDHhNHxJOr2xbxE4DV+S5jf2QeA0fEma39gHgdPwJWl+Yx8ETsNXlznIQXUoorPYafjqIgc5qC5FBAH0WgYGgLpicJDDUXq3NnfsmWLrxWv8PdaiG/tbQ1IXOchBdTIIpBZykIPqZBBIDZurQ9hBDqpTMX0EUhvN1yHsIAfVxSCQGjJKh7CDHFQHbw1JDbFDWG1hEEgNsUNYbWEQSA2xQ1htYR+B1CA7hNUGBoHUMDuE1TRvDVXIBcOkM/M8aZ4tgoq4YJiadvjIsdbfcvI8aQeDoAIuGKamdeEL1vOkPbw1VAHHh6tJXXk8q+dJexgEFXB8uJrUlS9Yz5P2MAgq4PhwNakrX7CeJ+0Rmdl0DQsyMTGRk5OTTZcxksXurJvv3+tCx6Dqs3f/s+xoeR/BLH936xER+zJzYq5tdhZXaDHHh8/X+deFjkHVq0sT1ZxH0TxvDXXAfJ1/XekYVP1Wr1jOpRtW+iWrMzIIOmC+zr+udAxKai9vDXXAmTr/utAxKKm9bBF0wHyjKxx5IenVctRQhzhqSNLZctTQmJhvdIUjLySdrUpvDUXE1RHxvYg4EBEfP80+V0bE/oh4IiK+UWU9ahdXnZTaobIWQUQsBe4E/hiYBh6NiL2Z+eTAPiuBzwFXZ+YzEfHaqupRuzj3QWqPKlsElwMHMvPpzHwJuBe4bmifm4D7MvMZgMz8cYX1qCWc+yC1S5VBsA44OPB6uv/eoDcAqyLi6xGxLyI+MNc/FBG3RMRkREweOnSoonJVF+c+SO1SZRDEHO8ND1E6B3gr8KfAu4G/i4g3vOIvZe7OzInMnFi7du3iV6padWVRNKkUVQbBNLBh4PV64Lk59vlqZv4yM58HvglcWmFNagHnPkjtUuXw0UeBSyLiIuBZ4AZ6fQKD7gfuiIhzgHOBK4B/qbAmtUSXFkWTxl1lQZCZJyJiO/AgsBS4OzOfiIhb+9t3ZeZTEfFVYAqYAe7KzO9WVZPaxbkPUjs4s1iSCjDfzGLXGpKkwhkEklQ4g0CSCmcQSFLhDAJJKpxBIEmFMwgkqXAGgSQVziCQpMIZBJJUOINAkgp3xiCIiO0RsaqOYiRJ9RulRfDb9J43/B/9h9HP9cAZSVJHnTEIMvNvgUuAfwU+CPxPRPxjRLy+4tokSTUYqY8ge2tV/1//zwlgFfDFiLi9wtokSTUYpY/gryNiH3A78G3g9zPzw/SeNXx9xfXV6vCRYzx28KccPnKs6VKk1vH8GF+jPKFsDfDnmfnDwTczcyYi/qyasup3//5n2blnimVLlnB8Zobbr9/CtZeta7osqRU8P8bbKH0EnxgOgYFtTy1+SfU7fOQYO/dMcfT4DL84doKjx2fYsWfKKx8Jz48SOI8AmH7hRZYtOfVQLFuyhOkXXmyoIqk9PD/Gn0EArF91PsdnZk557/jMDOtXnd9QRVJ7eH6MP4MAWL1iObdfv4Xzli3hguXncN6yJdx+/RZWr1jedGlS4zw/xl/0RoZ2x8TERE5OTlbybx8+cozpF15k/arz/SWXhnh+dFtE7MvMibm2jTJqqBirVyz3F1w6Dc+P8eWtIUkqnEEgSYUzCGrm7ExJbWMfQY2cnSmpjWwR1KTO2Zm2OiQthC2CmszOzjzKyYk5s7MzF3Mkhq2Os+PQSJXMIKhJHbMzB1sds4GzY88UWy9e45fbPAxPDSvtwsBbQzWpY3ama8IsnAuqadj9+59l620P8Zd3fYettz3E3v3PNl1S5SptEUTE1cBngKXAXZn5qdPs9zbgEeAvMvOLVdbUpGsvW8fWi9dUdqXhmjALV9ctO3VDqa3qyloEEbEUuBPYBmwGboyIzafZ7zbgwapqaZPVK5Zz6YaVlfxSuSbMwhmeGlRqq7rKFsHlwIHMfBogIu4FrgOeHNrvo8Ae4G0V1lKMqlsd42Y2PHcM9RF43MpU6oVBlUGwDjg48HoauGJwh4hYB7wHuIp5giAibgFuAdi4ceOiFzpuXBNmYQxPzSr1wqDKIIg53hte6vTTwM7MfDlirt37fylzN7AbequPLlaB0izDU7NKvDCoMgimgQ0Dr9cDzw3tMwHc2w+BNcA1EXEiM79UYV2SNK/SLgyqDIJHgUsi4iLgWeAG4KbBHTLzotmfI+Ie4D8NAUmqV2VBkJknImI7vdFAS4G7M/OJiLi1v31XVf9vSdLoKp1HkJkPAA8MvTdnAGTmB6usRSpdabNlNTqXmJAK4DIamo9LTEhjzmU0dCYGQQe4rLRejVJny2p03hpqOZv0erVKnS2r0dkiaLG2NOltkXSba1DpTGwRtFgbVsa0RTIeSpwtq9EZBC3WdJO+1CV5x1Vps2U1Om8NtVjTTXo7GaUy2CJouSab9E23SCTVwxZBB1T5MJsz/X/tZJTGny0CzctORmn8GQQ6IzsZpfHmrSFJKpxBIEmFMwi0IM4ylsaPfQQambOM6+czBFQHg0AjcZZx/Qxe1cVbQxqJs4zr1ZYFB1UGg0AjcZZxvQxe1ckg0EicZVwvg1d1so9AI3OWcX1mg3fHUB+Bx1xVMAi0IM4yro/Be/YcbbUwBoHUYgbvwnV5tFVTAWYQqBO8wtMoujzMuckAMwjUel2+wlO92vB417PRdIA5akit5nh6LURXR1s1PVzYIFCrNX2CqFu6Osy56QDz1pBarekTRN3TxdFWTQ8XNgjUak2fIOqmLo62ajLADAK1Xhev8KSz0VSAGQTqhC5e4UldYWexpM7xAUmLq9IWQURcDXwGWArclZmfGtr+PmBn/+UR4MOZ+ViVNUnqNueVLL7KWgQRsRS4E9gGbAZujIjNQ7v9APijzNwCfBLYXVU9krrPeSXVqPLW0OXAgcx8OjNfAu4FrhvcITMfzswX+i8fAdZXWI+kjnNeSTWqDIJ1wMGB19P9907nQ8BX5toQEbdExGRETB46dGgRS5TUJc4rqUaVQRBzvJdz7hjxTnpBsHOu7Zm5OzMnMnNi7dq1i1iipC7p6szhtquys3ga2DDwej3w3PBOEbEFuAvYlpmHK6xH0hhwXsniqzIIHgUuiYiLgGeBG4CbBneIiI3AfcD7M/P7FdYivYJLW3eX80oWV2VBkJknImI78CC94aN3Z+YTEXFrf/su4BPAauBzEQFwIjMnqqpJmuUQROmkyJzztn1rTUxM5OTkZNNlqMMOHznG1tse4ujxk52O5y1bwrd3XuVVpsZWROw73YW2M4tVHIcgSqcyCFQchyBKpzIIVByHIEqncvVRFckhiGpS20asGQQqlkMQ1YQ2jljz1pB0FlwGWWejrYvm2SKQFqiNV3TqhtkRa0c5OVhhdsRak61TWwTSArT1ik7d0NYRawaBtADOQdCr0dYRa94akhagiSu6to0w0avTxhFrBoG0ALNXdDuG+giqOpntjxhPbRuxZhBIC1TXFd1gf8Rs5+KOPVNsvXhNq75E1H0GgXQW6riia+sIE40fO4sFOC6+jdo6wkTjxxaBvA/dUnX3R6hcBkHhvA/dbm0cYaLxYxAUzvvQ7de2ESYaP/YRFM770JIMgsK1daajpPp4a0jeh5YKZxAI8D60VDJvDUlS4QwCSSqcQSBJhTMIJKlwBoEkFc4gkKTCGQSSWsNVcJvhPAJJreAquM2xRSCpcYOr4P7i2AmOHp9hx54pWwY1MQgkNW52FdxBs6vgqnqVBkFEXB0R34uIAxHx8Tm2R0R8tr99KiLeUmU9ktrJVXCbVVkQRMRS4E5gG7AZuDEiNg/ttg24pP/nFuDzVdUjqb1cBbdZVXYWXw4cyMynASLiXuA64MmBfa4DvpCZCTwSESsj4sLM/FGFdUlqIVfBbU6VQbAOODjwehq4YoR91gGnBEFE3EKvxcDGjRsXvVBJ7eAquM2oso8g5ngvz2IfMnN3Zk5k5sTatWsXpThJUk+VQTANbBh4vR547iz2kSRVqMogeBS4JCIuiohzgRuAvUP77AU+0B899HbgZ/YPSFK9KusjyMwTEbEdeBBYCtydmU9ExK397buAB4BrgAPAr4Cbq6pHkjS3SpeYyMwH6H3ZD763a+DnBD5SZQ2SpPlF77u4OyLiEPDDobfXAM83UE4beSx6PA4neSxOKvlY/E5mzjnapnNBMJeImMzMiabraAOPRY/H4SSPxUkei7m51pAkFc4gkKTCjUsQ7G66gBbxWPR4HE7yWJzksZjDWPQRSJLO3ri0CCRJZ8kgkKTCdSYIfMjNSSMci/f1j8FURDwcEZc2UWcdznQsBvZ7W0S8HBHvrbO+Oo1yLCLiyojYHxFPRMQ36q6xDiOcH6+JiC9HxGP94+CKBpnZ+j/0lqj4X+B3gXOBx4DNQ/tcA3yF3oqmbwe+03TdDR6LdwCr+j9vK/lYDOz3EL1Z7u9tuu4Gfy9W0nseyMb+69c2XXdDx+FvgNv6P68FfgKc23TtTf7pSovg1w+5ycyXgNmH3Az69UNuMvMRYGVEXFh3oTU447HIzIcz84X+y0foreo6jkb5vQD4KLAH+HGdxdVslGNxE3BfZj4DkJnjeDxGOQ4JXBARAaygFwQn6i2zXboSBKd7gM1C9xkHC/2cH6LXUhpHZzwWEbEOeA+wi/E2yu/FG4BVEfH1iNgXER+orbr6jHIc7gDeTG/J+8eBj2XmDAWrdNG5RbRoD7kZAyN/zoh4J70g+INKK2rOKMfi08DOzHy5dwE4tkY5FucAbwXeBZwP/FdEPJKZ36+6uBqNchzeDewHrgJeD3wtIr6VmT+vuLbW6koQ+JCbk0b6nBGxBbgL2JaZh2uqrW6jHIsJ4N5+CKwBromIE5n5pVoqrM+o58jzmflL4JcR8U3gUmCcgmCU43Az8KnsdRIciIgfAG8C/rueEtunK7eGfMjNSWc8FhGxEbgPeP+YXe0NO+OxyMyLMnNTZm4Cvgj81RiGAIx2jtwP/GFEnBMRv0HvGeJP1Vxn1UY5Ds/QaxUREa8D3gg8XWuVLdOJFkH6kJtfG/FYfAJYDXyufyV8IsdwxcURj0URRjkWmflURHwVmAJmgLsy87vNVb34Rvyd+CRwT0Q8Tu9W0s7MLHVpasAlJiSpeF25NSRJqohBIEmFMwgkqXAGgSQVziCQpMIZBJJUOINAkgpnEEivUv9ZB1MRcV5E/GZ/jfvfa7ouaVROKJMWQUT8A3AevcXcpjPznxouSRqZQSAtgv66No8CR4F3ZObLDZckjcxbQ9Li+C16Dzm5gF7LQOoMWwTSIoiIvfSehnURcGFmbm+4JGlknVh9VGqz/pO+TmTmv0XEUuDhiLgqMx9qujZpFLYIJKlw9hFIUuEMAkkqnEEgSYUzCCSpcAaBJBXOIJCkwhkEklS4/wcmddjkbCGL5AAAAABJRU5ErkJggg==
 "
 class="
 jp-needs-light-background
@@ -3403,14 +3404,6 @@ jp-needs-light-background
       <td></td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>0.925261</td>
-      <td>0.249796</td>
-      <td>NaN</td>
-      <td>True</td>
-      <td>concurrent.futures.process._RemoteTraceback: \...</td>
-    </tr>
-    <tr>
       <th>8</th>
       <td>0.731670</td>
       <td>0.020664</td>
@@ -3419,18 +3412,26 @@ jp-needs-light-background
       <td></td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>0.246336</td>
-      <td>0.087637</td>
-      <td>0.068362</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
       <th>10</th>
       <td>0.333263</td>
       <td>0.600748</td>
       <td>0.471962</td>
+      <td>False</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.925261</td>
+      <td>0.249796</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>concurrent.futures.process._RemoteTraceback: \...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0.246336</td>
+      <td>0.087637</td>
+      <td>0.068362</td>
       <td>False</td>
       <td></td>
     </tr>
@@ -3445,71 +3446,71 @@ jp-needs-light-background
     <tr>
       <th>12</th>
       <td>0.276934</td>
-      <td>0.043808</td>
-      <td>0.078611</td>
+      <td>0.287898</td>
+      <td>0.159577</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>13</th>
       <td>0.031670</td>
-      <td>0.266466</td>
-      <td>0.072007</td>
+      <td>0.757285</td>
+      <td>0.574484</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>14</th>
       <td>0.132335</td>
-      <td>0.287898</td>
-      <td>0.100398</td>
+      <td>0.429563</td>
+      <td>0.202037</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>15</th>
       <td>0.208765</td>
-      <td>0.757285</td>
-      <td>0.617064</td>
+      <td>0.422266</td>
+      <td>0.221891</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>16</th>
       <td>0.555539</td>
-      <td>0.429563</td>
-      <td>0.493148</td>
+      <td>0.107252</td>
+      <td>0.320127</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>17</th>
-      <td>0.422266</td>
-      <td>0.835407</td>
-      <td>0.876214</td>
+      <td>0.043808</td>
+      <td>0.878615</td>
+      <td>0.773883</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>18</th>
-      <td>0.107252</td>
-      <td>0.905642</td>
-      <td>0.831690</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>20</th>
+      <td>0.266466</td>
       <td>0.339161</td>
-      <td>0.139856</td>
-      <td>0.134590</td>
+      <td>0.186035</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>19</th>
-      <td>0.878615</td>
+      <td>0.835407</td>
       <td>0.412386</td>
+      <td>NaN</td>
+      <td>True</td>
+      <td>concurrent.futures.process._RemoteTraceback: \...</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0.905642</td>
+      <td>0.139856</td>
       <td>NaN</td>
       <td>True</td>
       <td>concurrent.futures.process._RemoteTraceback: \...</td>
@@ -3525,72 +3526,72 @@ jp-needs-light-background
     <tr>
       <th>22</th>
       <td>0.481673</td>
-      <td>0.869150</td>
-      <td>0.987431</td>
+      <td>0.996450</td>
+      <td>1.224920</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>23</th>
-      <td>0.996450</td>
-      <td>0.242342</td>
-      <td>NaN</td>
-      <td>True</td>
-      <td>concurrent.futures.process._RemoteTraceback: \...</td>
+      <td>0.196908</td>
+      <td>0.640671</td>
+      <td>0.449232</td>
+      <td>False</td>
+      <td></td>
     </tr>
     <tr>
       <th>24</th>
-      <td>0.196908</td>
-      <td>0.658418</td>
-      <td>0.472288</td>
+      <td>0.579855</td>
+      <td>0.810641</td>
+      <td>0.993371</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>25</th>
-      <td>0.640671</td>
-      <td>0.478615</td>
-      <td>0.639531</td>
+      <td>0.797356</td>
+      <td>0.869150</td>
+      <td>1.391199</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>26</th>
-      <td>0.579855</td>
-      <td>0.116977</td>
-      <td>0.349915</td>
+      <td>0.367202</td>
+      <td>0.242342</td>
+      <td>0.193567</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>27</th>
-      <td>0.797356</td>
-      <td>0.550858</td>
-      <td>0.939222</td>
+      <td>0.658418</td>
+      <td>0.478615</td>
+      <td>0.662587</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>28</th>
-      <td>0.367202</td>
-      <td>0.760978</td>
-      <td>0.713924</td>
+      <td>0.116977</td>
+      <td>0.669859</td>
+      <td>0.462395</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>29</th>
-      <td>0.810641</td>
-      <td>0.669859</td>
-      <td>NaN</td>
-      <td>True</td>
-      <td>concurrent.futures.process._RemoteTraceback: \...</td>
+      <td>0.550858</td>
+      <td>0.733491</td>
+      <td>0.841453</td>
+      <td>False</td>
+      <td></td>
     </tr>
     <tr>
       <th>30</th>
-      <td>0.733491</td>
+      <td>0.760978</td>
       <td>0.202318</td>
-      <td>0.578941</td>
+      <td>0.620020</td>
       <td>False</td>
       <td></td>
     </tr>
@@ -3605,152 +3606,48 @@ jp-needs-light-background
     <tr>
       <th>32</th>
       <td>0.177374</td>
-      <td>0.283422</td>
-      <td>0.111790</td>
+      <td>0.639232</td>
+      <td>0.440079</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>33</th>
-      <td>0.639232</td>
-      <td>0.250679</td>
-      <td>0.471458</td>
+      <td>0.430299</td>
+      <td>0.169767</td>
+      <td>0.213978</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>34</th>
-      <td>0.430299</td>
-      <td>0.413752</td>
-      <td>0.356348</td>
+      <td>0.552324</td>
+      <td>0.283422</td>
+      <td>0.385390</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>35</th>
-      <td>0.169767</td>
-      <td>0.452401</td>
-      <td>0.233488</td>
+      <td>0.786717</td>
+      <td>0.250679</td>
+      <td>0.681764</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>36</th>
-      <td>0.552324</td>
-      <td>0.918227</td>
-      <td>1.148202</td>
+      <td>0.438846</td>
+      <td>0.413752</td>
+      <td>0.363776</td>
       <td>False</td>
       <td></td>
     </tr>
     <tr>
       <th>37</th>
-      <td>0.786717</td>
-      <td>0.591471</td>
-      <td>0.968761</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>0.438846</td>
-      <td>0.367948</td>
-      <td>0.327971</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>0.878311</td>
-      <td>0.922295</td>
-      <td>NaN</td>
-      <td>True</td>
-      <td>concurrent.futures.process._RemoteTraceback: \...</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>0.725191</td>
-      <td>0.842734</td>
-      <td>1.236103</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>0.850220</td>
-      <td>0.614646</td>
-      <td>NaN</td>
-      <td>True</td>
-      <td>concurrent.futures.process._RemoteTraceback: \...</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>0.290585</td>
-      <td>0.554812</td>
-      <td>0.392257</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>0.093673</td>
-      <td>0.138991</td>
-      <td>0.028093</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>0.984153</td>
-      <td>0.005086</td>
-      <td>NaN</td>
-      <td>True</td>
-      <td>concurrent.futures.process._RemoteTraceback: \...</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>0.948004</td>
-      <td>0.487754</td>
-      <td>NaN</td>
-      <td>True</td>
-      <td>concurrent.futures.process._RemoteTraceback: \...</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>0.988845</td>
-      <td>0.041419</td>
-      <td>NaN</td>
-      <td>True</td>
-      <td>concurrent.futures.process._RemoteTraceback: \...</td>
-    </tr>
-    <tr>
-      <th>47</th>
-      <td>0.506894</td>
-      <td>0.334202</td>
-      <td>0.368632</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>48</th>
-      <td>0.448976</td>
-      <td>0.159841</td>
-      <td>0.227129</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>49</th>
-      <td>0.727395</td>
-      <td>0.853088</td>
-      <td>1.256863</td>
-      <td>False</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>0.768856</td>
-      <td>0.856056</td>
-      <td>1.323972</td>
+      <td>0.452401</td>
+      <td>0.918227</td>
+      <td>1.047807</td>
       <td>False</td>
       <td></td>
     </tr>
