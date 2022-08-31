@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.0">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.2">
     
     
       
@@ -2056,7 +2056,7 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |  ----------------------------------------------------------------------
  |  Static methods defined here:
  |  
- |  __json_encoder__ = functools.partial(&lt;cyfunction custom_pydantic_en...optBaseModel.Config.&lt;lambda&gt; at 0x7f0b83dde0d0&gt;})
+ |  __json_encoder__ = functools.partial(&lt;cyfunction custom_pydantic_en...optBaseModel.Config.&lt;lambda&gt; at 0x7eff01c753a0&gt;})
  |  ----------------------------------------------------------------------
  |  Readonly properties defined here:
  |  
@@ -2158,7 +2158,7 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |  
  |  __setstate__(self, state: &#39;DictAny&#39;) -&gt; None
  |  
- |  copy(self: &#39;Model&#39;, *, include: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;)] = None, exclude: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;)] = None, update: &#39;DictStrAny&#39; = None, deep: bool = False) -&gt; &#39;Model&#39;
+ |  copy(self: &#39;Model&#39;, *, include: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;), NoneType] = None, exclude: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;), NoneType] = None, update: Optional[ForwardRef(&#39;DictStrAny&#39;)] = None, deep: bool = False) -&gt; &#39;Model&#39;
  |      Duplicate a model, optionally choose which fields to include, exclude and change.
  |      
  |      :param include: fields to include in new model
@@ -2168,10 +2168,10 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |      :param deep: set to `True` to make a deep copy of the model
  |      :return: new model instance
  |  
- |  dict(self, *, include: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;)] = None, exclude: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;)] = None, by_alias: bool = False, skip_defaults: bool = None, exclude_unset: bool = False, exclude_defaults: bool = False, exclude_none: bool = False) -&gt; &#39;DictStrAny&#39;
+ |  dict(self, *, include: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;), NoneType] = None, exclude: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;), NoneType] = None, by_alias: bool = False, skip_defaults: Optional[bool] = None, exclude_unset: bool = False, exclude_defaults: bool = False, exclude_none: bool = False) -&gt; &#39;DictStrAny&#39;
  |      Generate a dictionary representation of the model, optionally specifying which fields to include or exclude.
  |  
- |  json(self, *, include: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;)] = None, exclude: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;)] = None, by_alias: bool = False, skip_defaults: bool = None, exclude_unset: bool = False, exclude_defaults: bool = False, exclude_none: bool = False, encoder: Optional[Callable[[Any], Any]] = None, models_as_dict: bool = True, **dumps_kwargs: Any) -&gt; &#39;unicode&#39;
+ |  json(self, *, include: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;), NoneType] = None, exclude: Union[ForwardRef(&#39;AbstractSetIntStr&#39;), ForwardRef(&#39;MappingIntStrAny&#39;), NoneType] = None, by_alias: bool = False, skip_defaults: Optional[bool] = None, exclude_unset: bool = False, exclude_defaults: bool = False, exclude_none: bool = False, encoder: Optional[Callable[[Any], Any]] = None, models_as_dict: bool = True, **dumps_kwargs: Any) -&gt; &#39;unicode&#39;
  |      Generate a JSON representation of the model, `include` and `exclude` arguments as per `dict()`.
  |      
  |      `encoder` is an optional function to supply as `default` to json.dumps(), other arguments as per `json.dumps()`.
@@ -2227,6 +2227,9 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |      Name of the instance&#39;s class, used in __repr__.
  |  
  |  __repr_str__(self, join_str: &#39;unicode&#39;) -&gt; &#39;unicode&#39;
+ |  
+ |  __rich_repr__(self) -&gt; &#39;RichReprResult&#39;
+ |      Get fields for Rich library
  |  
  |  __str__(self) -&gt; &#39;unicode&#39;
 
@@ -2768,103 +2771,103 @@ data</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>942.355416</td>
-      <td>0.170856</td>
+      <td>704.683590</td>
+      <td>0.064210</td>
       <td>1234</td>
-      <td>942.526272</td>
-      <td>942.184560</td>
-      <td>1885.052543</td>
-      <td>1884.369120</td>
+      <td>704.747800</td>
+      <td>704.619380</td>
+      <td>1409.495601</td>
+      <td>1409.238760</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>334.701362</td>
-      <td>0.197143</td>
+      <td>762.752604</td>
+      <td>-0.107346</td>
       <td>1234</td>
-      <td>334.898505</td>
-      <td>334.504218</td>
-      <td>669.797010</td>
-      <td>669.008436</td>
+      <td>762.645258</td>
+      <td>762.859950</td>
+      <td>1525.290515</td>
+      <td>1525.719900</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>652.170757</td>
-      <td>0.894173</td>
+      <td>87.235887</td>
+      <td>-0.235631</td>
       <td>1234</td>
-      <td>653.064930</td>
-      <td>651.276585</td>
-      <td>1306.129860</td>
-      <td>1302.553170</td>
+      <td>87.000255</td>
+      <td>87.471518</td>
+      <td>174.000511</td>
+      <td>174.943036</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>391.615040</td>
-      <td>0.006623</td>
+      <td>121.956837</td>
+      <td>-0.089674</td>
       <td>1234</td>
-      <td>391.621663</td>
-      <td>391.608416</td>
-      <td>783.243326</td>
-      <td>783.216832</td>
+      <td>121.867164</td>
+      <td>122.046511</td>
+      <td>243.734327</td>
+      <td>244.093021</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>499.906555</td>
-      <td>0.417660</td>
+      <td>331.312849</td>
+      <td>0.805248</td>
       <td>1234</td>
-      <td>500.324215</td>
-      <td>499.488895</td>
-      <td>1000.648430</td>
-      <td>998.977789</td>
+      <td>332.118097</td>
+      <td>330.507601</td>
+      <td>664.236194</td>
+      <td>661.015203</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>297.766636</td>
-      <td>0.587783</td>
+      <td>136.954361</td>
+      <td>0.486290</td>
       <td>1234</td>
-      <td>298.354418</td>
-      <td>297.178853</td>
-      <td>596.708836</td>
-      <td>594.357706</td>
+      <td>137.440651</td>
+      <td>136.468071</td>
+      <td>274.881302</td>
+      <td>272.936143</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>271.759592</td>
-      <td>-0.629808</td>
+      <td>664.246525</td>
+      <td>-0.691689</td>
       <td>1234</td>
-      <td>271.129785</td>
-      <td>272.389400</td>
-      <td>542.259569</td>
-      <td>544.778801</td>
+      <td>663.554836</td>
+      <td>664.938214</td>
+      <td>1327.109673</td>
+      <td>1329.876427</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>582.826181</td>
-      <td>-0.989908</td>
+      <td>917.444685</td>
+      <td>0.401152</td>
       <td>1234</td>
-      <td>581.836273</td>
-      <td>583.816090</td>
-      <td>1163.672545</td>
-      <td>1167.632179</td>
+      <td>917.845837</td>
+      <td>917.043534</td>
+      <td>1835.691674</td>
+      <td>1834.087068</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>819.638269</td>
-      <td>0.440147</td>
+      <td>443.320131</td>
+      <td>-0.998264</td>
       <td>1234</td>
-      <td>820.078416</td>
-      <td>819.198122</td>
-      <td>1640.156832</td>
-      <td>1638.396243</td>
+      <td>442.321867</td>
+      <td>444.318394</td>
+      <td>884.643734</td>
+      <td>888.636788</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>746.649002</td>
-      <td>0.306690</td>
+      <td>88.867430</td>
+      <td>0.231439</td>
       <td>1234</td>
-      <td>746.955692</td>
-      <td>746.342312</td>
-      <td>1493.911384</td>
-      <td>1492.684624</td>
+      <td>89.098869</td>
+      <td>88.635990</td>
+      <td>178.197737</td>
+      <td>177.271981</td>
     </tr>
   </tbody>
 </table>
@@ -3008,53 +3011,53 @@ form_objective_data(vocs.objectives, data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-942.526272</td>
-      <td>942.184560</td>
+      <td>-704.747800</td>
+      <td>704.619380</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-334.898505</td>
-      <td>334.504218</td>
+      <td>-762.645258</td>
+      <td>762.859950</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-653.064930</td>
-      <td>651.276585</td>
+      <td>-87.000255</td>
+      <td>87.471518</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-391.621663</td>
-      <td>391.608416</td>
+      <td>-121.867164</td>
+      <td>122.046511</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-500.324215</td>
-      <td>499.488895</td>
+      <td>-332.118097</td>
+      <td>330.507601</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-298.354418</td>
-      <td>297.178853</td>
+      <td>-137.440651</td>
+      <td>136.468071</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-271.129785</td>
-      <td>272.389400</td>
+      <td>-663.554836</td>
+      <td>664.938214</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-581.836273</td>
-      <td>583.816090</td>
+      <td>-917.845837</td>
+      <td>917.043534</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-820.078416</td>
-      <td>819.198122</td>
+      <td>-442.321867</td>
+      <td>444.318394</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-746.955692</td>
-      <td>746.342312</td>
+      <td>-89.098869</td>
+      <td>88.635990</td>
     </tr>
   </tbody>
 </table>
@@ -3141,53 +3144,53 @@ vocs.objective_data(data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-942.526272</td>
-      <td>942.184560</td>
+      <td>-704.747800</td>
+      <td>704.619380</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-334.898505</td>
-      <td>334.504218</td>
+      <td>-762.645258</td>
+      <td>762.859950</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-653.064930</td>
-      <td>651.276585</td>
+      <td>-87.000255</td>
+      <td>87.471518</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-391.621663</td>
-      <td>391.608416</td>
+      <td>-121.867164</td>
+      <td>122.046511</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-500.324215</td>
-      <td>499.488895</td>
+      <td>-332.118097</td>
+      <td>330.507601</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-298.354418</td>
-      <td>297.178853</td>
+      <td>-137.440651</td>
+      <td>136.468071</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-271.129785</td>
-      <td>272.389400</td>
+      <td>-663.554836</td>
+      <td>664.938214</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-581.836273</td>
-      <td>583.816090</td>
+      <td>-917.845837</td>
+      <td>917.043534</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-820.078416</td>
-      <td>819.198122</td>
+      <td>-442.321867</td>
+      <td>444.318394</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-746.955692</td>
-      <td>746.342312</td>
+      <td>-89.098869</td>
+      <td>88.635990</td>
     </tr>
   </tbody>
 </table>
@@ -3250,16 +3253,16 @@ vocs.objective_data(data).to_numpy()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[-942.5262716 ,  942.18455985],
-       [-334.89850499,  334.5042182 ],
-       [-653.0649302 ,  651.2765848 ],
-       [-391.6216631 ,  391.60841619],
-       [-500.32421507,  499.48889467],
-       [-298.3544181 ,  297.17885305],
-       [-271.12978451,  272.38940043],
-       [-581.8362726 ,  583.81608951],
-       [-820.07841608,  819.1981217 ],
-       [-746.95569181,  746.34231202]])</pre>
+<pre>array([[-704.74780025,  704.61937989],
+       [-762.6452575 ,  762.85994981],
+       [ -87.00025547,   87.47151798],
+       [-121.86716356,  122.04651068],
+       [-332.11809708,  330.50760131],
+       [-137.44065091,  136.46807139],
+       [-663.55483632,  664.93821356],
+       [-917.84583694,  917.04353393],
+       [-442.32186692,  444.3183942 ],
+       [ -89.09886863,   88.63599044]])</pre>
 </div>
 
 </div>
@@ -3340,53 +3343,53 @@ vocs.objective_data(data).to_numpy()</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>1883.052543</td>
-      <td>-1884.369120</td>
+      <td>1407.495601</td>
+      <td>-1409.238760</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>667.797010</td>
-      <td>-669.008436</td>
+      <td>1523.290515</td>
+      <td>-1525.719900</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>1304.129860</td>
-      <td>-1302.553170</td>
+      <td>172.000511</td>
+      <td>-174.943036</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>781.243326</td>
-      <td>-783.216832</td>
+      <td>241.734327</td>
+      <td>-244.093021</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>998.648430</td>
-      <td>-998.977789</td>
+      <td>662.236194</td>
+      <td>-661.015203</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>594.708836</td>
-      <td>-594.357706</td>
+      <td>272.881302</td>
+      <td>-272.936143</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>540.259569</td>
-      <td>-544.778801</td>
+      <td>1325.109673</td>
+      <td>-1329.876427</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>1161.672545</td>
-      <td>-1167.632179</td>
+      <td>1833.691674</td>
+      <td>-1834.087068</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>1638.156832</td>
-      <td>-1638.396243</td>
+      <td>882.643734</td>
+      <td>-888.636788</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>1491.911384</td>
-      <td>-1492.684624</td>
+      <td>176.197737</td>
+      <td>-177.271981</td>
     </tr>
   </tbody>
 </table>
