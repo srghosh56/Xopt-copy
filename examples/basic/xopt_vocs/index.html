@@ -491,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bayes_opt/upper_confidence_bound_tnk/" class="md-nav__link">
+      <a href="../../bayes_opt/upper_confidence_bound/" class="md-nav__link">
         Upper Confidence Bound BO
       </a>
     </li>
@@ -1995,6 +1995,18 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |      Assumes that the columns of the array match correspond to
  |      `sorted(self.vocs.variables.keys())
  |  
+ |  extract_data(self, data: pandas.core.frame.DataFrame)
+ |      split dataframe into seperate dataframes for variables, objectives and
+ |      constraints based on vocs
+ |      
+ |      Args:
+ |          data: dataframe to be split
+ |      
+ |      Returns:
+ |          variable_data: dataframe containing variable data
+ |          objective_data: dataframe containing objective data
+ |          constraint_data: dataframe containing constraint data
+ |  
  |  feasibility_data(self, data: Union[pandas.core.frame.DataFrame, List[Dict]], prefix: str = &#39;feasible_&#39;) -&gt; pandas.core.frame.DataFrame
  |      Returns a dataframe containing booleans denoting if a constraint is satisfied or
  |      not. Returned dataframe also contains a column `feasibility` which denotes if
@@ -2060,7 +2072,7 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |  ----------------------------------------------------------------------
  |  Static methods defined here:
  |  
- |  __json_encoder__ = functools.partial(&lt;cyfunction custom_pydantic_en...loat64&#39;&gt;: &lt;function &lt;lambda&gt; at 0x7f7971fb7550&gt;})
+ |  __json_encoder__ = functools.partial(&lt;cyfunction custom_pydantic_en...loat64&#39;&gt;: &lt;function &lt;lambda&gt; at 0x7fd38f84c4c0&gt;})
  |  ----------------------------------------------------------------------
  |  Readonly properties defined here:
  |  
@@ -2775,103 +2787,103 @@ data</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>583.843040</td>
-      <td>-0.797342</td>
+      <td>675.044782</td>
+      <td>-0.785241</td>
       <td>1234</td>
-      <td>583.045697</td>
-      <td>584.640382</td>
-      <td>1166.091395</td>
-      <td>1169.280764</td>
+      <td>674.259542</td>
+      <td>675.830023</td>
+      <td>1348.519083</td>
+      <td>1351.660046</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>202.337240</td>
-      <td>-0.729127</td>
+      <td>954.552587</td>
+      <td>0.592531</td>
       <td>1234</td>
-      <td>201.608114</td>
-      <td>203.066367</td>
-      <td>403.216227</td>
-      <td>406.132734</td>
+      <td>955.145119</td>
+      <td>953.960056</td>
+      <td>1910.290237</td>
+      <td>1907.920112</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>17.081737</td>
-      <td>0.467132</td>
+      <td>189.491453</td>
+      <td>-0.011029</td>
       <td>1234</td>
-      <td>17.548869</td>
-      <td>16.614606</td>
-      <td>35.097738</td>
-      <td>33.229211</td>
+      <td>189.480424</td>
+      <td>189.502481</td>
+      <td>378.960848</td>
+      <td>379.004963</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>492.757768</td>
-      <td>0.018676</td>
+      <td>741.254599</td>
+      <td>0.833940</td>
       <td>1234</td>
-      <td>492.776443</td>
-      <td>492.739092</td>
-      <td>985.552887</td>
-      <td>985.478184</td>
+      <td>742.088539</td>
+      <td>740.420659</td>
+      <td>1484.177077</td>
+      <td>1480.841317</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>667.167306</td>
-      <td>-0.980435</td>
+      <td>86.177330</td>
+      <td>-0.924920</td>
       <td>1234</td>
-      <td>666.186871</td>
-      <td>668.147741</td>
-      <td>1332.373741</td>
-      <td>1336.295482</td>
+      <td>85.252411</td>
+      <td>87.102250</td>
+      <td>170.504821</td>
+      <td>174.204501</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>938.738971</td>
-      <td>0.747193</td>
+      <td>950.949035</td>
+      <td>-0.607123</td>
       <td>1234</td>
-      <td>939.486164</td>
-      <td>937.991778</td>
-      <td>1878.972329</td>
-      <td>1875.983556</td>
+      <td>950.341913</td>
+      <td>951.556158</td>
+      <td>1900.683825</td>
+      <td>1903.112315</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>964.042355</td>
-      <td>0.049400</td>
+      <td>560.484166</td>
+      <td>0.716766</td>
       <td>1234</td>
-      <td>964.091756</td>
-      <td>963.992955</td>
-      <td>1928.183512</td>
-      <td>1927.985910</td>
+      <td>561.200932</td>
+      <td>559.767400</td>
+      <td>1122.401863</td>
+      <td>1119.534800</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.368256</td>
-      <td>0.094693</td>
+      <td>124.389479</td>
+      <td>0.478123</td>
       <td>1234</td>
-      <td>0.462950</td>
-      <td>0.273563</td>
-      <td>0.925899</td>
-      <td>0.547126</td>
+      <td>124.867602</td>
+      <td>123.911356</td>
+      <td>249.735203</td>
+      <td>247.822711</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>217.958981</td>
-      <td>0.511284</td>
+      <td>627.930534</td>
+      <td>-0.342141</td>
       <td>1234</td>
-      <td>218.470266</td>
-      <td>217.447697</td>
-      <td>436.940531</td>
-      <td>434.895394</td>
+      <td>627.588393</td>
+      <td>628.272676</td>
+      <td>1255.176786</td>
+      <td>1256.545352</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>275.664771</td>
-      <td>0.972331</td>
+      <td>930.540616</td>
+      <td>0.482949</td>
       <td>1234</td>
-      <td>276.637102</td>
-      <td>274.692441</td>
-      <td>553.274204</td>
-      <td>549.384882</td>
+      <td>931.023565</td>
+      <td>930.057667</td>
+      <td>1862.047130</td>
+      <td>1860.115334</td>
     </tr>
   </tbody>
 </table>
@@ -3015,53 +3027,53 @@ form_objective_data(vocs.objectives, data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-583.045697</td>
-      <td>584.640382</td>
+      <td>-674.259542</td>
+      <td>675.830023</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-201.608114</td>
-      <td>203.066367</td>
+      <td>-955.145119</td>
+      <td>953.960056</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-17.548869</td>
-      <td>16.614606</td>
+      <td>-189.480424</td>
+      <td>189.502481</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-492.776443</td>
-      <td>492.739092</td>
+      <td>-742.088539</td>
+      <td>740.420659</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-666.186871</td>
-      <td>668.147741</td>
+      <td>-85.252411</td>
+      <td>87.102250</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-939.486164</td>
-      <td>937.991778</td>
+      <td>-950.341913</td>
+      <td>951.556158</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-964.091756</td>
-      <td>963.992955</td>
+      <td>-561.200932</td>
+      <td>559.767400</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-0.462950</td>
-      <td>0.273563</td>
+      <td>-124.867602</td>
+      <td>123.911356</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-218.470266</td>
-      <td>217.447697</td>
+      <td>-627.588393</td>
+      <td>628.272676</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-276.637102</td>
-      <td>274.692441</td>
+      <td>-931.023565</td>
+      <td>930.057667</td>
     </tr>
   </tbody>
 </table>
@@ -3148,53 +3160,53 @@ vocs.objective_data(data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-583.045697</td>
-      <td>584.640382</td>
+      <td>-674.259542</td>
+      <td>675.830023</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-201.608114</td>
-      <td>203.066367</td>
+      <td>-955.145119</td>
+      <td>953.960056</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-17.548869</td>
-      <td>16.614606</td>
+      <td>-189.480424</td>
+      <td>189.502481</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-492.776443</td>
-      <td>492.739092</td>
+      <td>-742.088539</td>
+      <td>740.420659</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-666.186871</td>
-      <td>668.147741</td>
+      <td>-85.252411</td>
+      <td>87.102250</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-939.486164</td>
-      <td>937.991778</td>
+      <td>-950.341913</td>
+      <td>951.556158</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-964.091756</td>
-      <td>963.992955</td>
+      <td>-561.200932</td>
+      <td>559.767400</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-0.462950</td>
-      <td>0.273563</td>
+      <td>-124.867602</td>
+      <td>123.911356</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-218.470266</td>
-      <td>217.447697</td>
+      <td>-627.588393</td>
+      <td>628.272676</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-276.637102</td>
-      <td>274.692441</td>
+      <td>-931.023565</td>
+      <td>930.057667</td>
     </tr>
   </tbody>
 </table>
@@ -3257,16 +3269,16 @@ vocs.objective_data(data).to_numpy()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[-5.83045697e+02,  5.84640382e+02],
-       [-2.01608114e+02,  2.03066367e+02],
-       [-1.75488690e+01,  1.66146056e+01],
-       [-4.92776443e+02,  4.92739092e+02],
-       [-6.66186871e+02,  6.68147741e+02],
-       [-9.39486164e+02,  9.37991778e+02],
-       [-9.64091756e+02,  9.63992955e+02],
-       [-4.62949713e-01,  2.73562879e-01],
-       [-2.18470266e+02,  2.17447697e+02],
-       [-2.76637102e+02,  2.74692441e+02]])</pre>
+<pre>array([[-674.25954157,  675.83002296],
+       [-955.14511864,  953.96005608],
+       [-189.48042417,  189.50248148],
+       [-742.08853855,  740.42065871],
+       [ -85.25241063,   87.10225028],
+       [-950.34191255,  951.55615774],
+       [-561.2009316 ,  559.7674    ],
+       [-124.86760172,  123.91135552],
+       [-627.58839287,  628.27267579],
+       [-931.02356507,  930.0576672 ]])</pre>
 </div>
 
 </div>
@@ -3347,53 +3359,53 @@ vocs.objective_data(data).to_numpy()</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>1164.091395</td>
-      <td>-1169.280764</td>
+      <td>1346.519083</td>
+      <td>-1351.660046</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>401.216227</td>
-      <td>-406.132734</td>
+      <td>1908.290237</td>
+      <td>-1907.920112</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>33.097738</td>
-      <td>-33.229211</td>
+      <td>376.960848</td>
+      <td>-379.004963</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>983.552887</td>
-      <td>-985.478184</td>
+      <td>1482.177077</td>
+      <td>-1480.841317</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>1330.373741</td>
-      <td>-1336.295482</td>
+      <td>168.504821</td>
+      <td>-174.204501</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>1876.972329</td>
-      <td>-1875.983556</td>
+      <td>1898.683825</td>
+      <td>-1903.112315</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>1926.183512</td>
-      <td>-1927.985910</td>
+      <td>1120.401863</td>
+      <td>-1119.534800</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-1.074101</td>
-      <td>-0.547126</td>
+      <td>247.735203</td>
+      <td>-247.822711</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>434.940531</td>
-      <td>-434.895394</td>
+      <td>1253.176786</td>
+      <td>-1256.545352</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>551.274204</td>
-      <td>-549.384882</td>
+      <td>1860.047130</td>
+      <td>-1860.115334</td>
     </tr>
   </tbody>
 </table>
@@ -3521,9 +3533,9 @@ vocs.objective_data(data).to_numpy()</div>
     </tr>
     <tr>
       <th>12</th>
+      <td>False</td>
       <td>True</td>
-      <td>True</td>
-      <td>True</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>13</th>
