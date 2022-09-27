@@ -1990,7 +1990,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="xopt-basic-example">Xopt basic example<a class="anchor-link" href="#xopt-basic-example">&#182;</a></h1><p>An Xopt problem can be described by a simple YAML file. Here we will demonstrate how this is used to optimize a well-known constrained multi-objective test function, TNK. The TNK function is defined with:</p>
+<h1 id="Xopt-basic-example">Xopt basic example<a class="anchor-link" href="#Xopt-basic-example">&#182;</a></h1><p>An Xopt problem can be described by a simple YAML file. Here we will demonstrate how this is used to optimize a well-known constrained multi-objective test function, TNK. The TNK function is defined with:</p>
 <p>$n=2$ variables:
 $x_i \in [0, \pi], i=1,2$</p>
 <p>Objectives:</p>
@@ -2081,18 +2081,24 @@ from xopt import Xopt</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="xopt-components">Xopt Components<a class="anchor-link" href="#xopt-components">&#182;</a></h2><p>The definition of the Xopt object requires 4 parts, listed below:</p>
+<h2 id="Xopt-Components">Xopt Components<a class="anchor-link" href="#Xopt-Components">&#182;</a></h2><p>The definition of the Xopt object requires 4 parts, listed below:</p>
 <ul>
-<li>The <code>Xopt</code> object itself, which controlls data flow, stores data and governs data
-loading and saving.</li>
-<li>The <code>Evaluator</code> object, which evaluates input points using the arbitrary function
-specified by the <code>function</code> property.</li>
-<li>The <code>Generator</code> object, which, when given data that has been evaluated, generates
-future points to evaluate using the evaluator.</li>
-<li>The <code>VOCS</code> (variables, objectives, constraints, statics) object, which specifies the
-input domain, the objectives, constraints and constants passed to the evaluator
-function.</li>
+<li>The <code>Xopt</code> object itself, which controlls data flow, stores data and governs data</li>
 </ul>
+<p>loading and saving.</p>
+<ul>
+<li>The <code>Evaluator</code> object, which evaluates input points using the arbitrary function</li>
+</ul>
+<p>specified by the <code>function</code> property.</p>
+<ul>
+<li>The <code>Generator</code> object, which, when given data that has been evaluated, generates</li>
+</ul>
+<p>future points to evaluate using the evaluator.</p>
+<ul>
+<li>The <code>VOCS</code> (variables, objectives, constraints, statics) object, which specifies the</li>
+</ul>
+<p>input domain, the objectives, constraints and constants passed to the evaluator
+function.</p>
 <p>Through the YAML interface these objects and their options are specified by name. 
 Here we will make one:</p>
 
@@ -2248,9 +2254,7 @@ X</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
@@ -2261,7 +2265,7 @@ X</div>
 <pre>
             Xopt
 ________________________________
-Version: 0+untagged.1.g2dc85c4
+Version: 0+untagged.1.gfbad7c4
 Data size: 0
 Config as YAML:
 xopt: {asynch: false, strict: false, dump_file: null, max_evaluations: null}
@@ -2328,9 +2332,7 @@ vocs:
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
@@ -2338,16 +2340,17 @@ vocs:
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;y1&#39;: array([0.84594678, 1.476309  , 0.84068675, 0.58151051, 0.28487751,
-        1.11316578, 2.16221902, 1.20886057, 2.83361091, 1.92585506]),
- &#39;y2&#39;: array([0.60514791, 1.65923132, 1.20958234, 1.57021009, 2.90184048,
-        0.61054242, 2.65960628, 0.78778882, 0.21060067, 2.09660266]),
- &#39;c1&#39;: array([ 0.16908084,  3.87294255,  1.26557427,  1.72165395,  7.50132615,
-         0.62908945, 10.75607394,  1.1802688 ,  7.03625685,  7.02682586]),
- &#39;c2&#39;: array([0.13073526, 2.29699651, 0.61957456, 1.1519936 , 5.81511539,
-        0.3881919 , 7.42687136, 0.58530571, 5.52949187, 4.58220271]),
+<pre>{&#39;y1&#39;: array([1.99674986, 1.14632319, 1.12649081, 0.75830445, 0.42582547,
+        3.09439737, 0.49948197, 1.55956239, 0.74951629, 1.07488373]),
+ &#39;y2&#39;: array([2.22423232, 2.34560054, 1.86983531, 1.19041521, 0.5366126 ,
+        1.31872941, 2.71706772, 0.79091796, 3.03896327, 1.39610324]),
+ &#39;c1&#39;: array([ 7.86908627,  5.76103303,  3.83848767,  1.08605916, -0.50473066,
+        10.21566056,  6.72924237,  2.02401562,  8.8717656 ,  2.15220648]),
+ &#39;c2&#39;: array([5.21323723e+00, 3.82397502e+00, 2.26893951e+00, 5.43394353e-01,
+        6.84234323e-03, 7.40121554e+00, 4.91538955e+00, 1.20730571e+00,
+        6.50859286e+00, 1.13349232e+00]),
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 6.209999992279336e-05,
+ &#39;xopt_runtime&#39;: 0.00017630299998927512,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -2365,7 +2368,7 @@ vocs:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="run-random-data-generation">Run Random data generation<a class="anchor-link" href="#run-random-data-generation">&#182;</a></h2>
+<h2 id="Run-Random-data-generation">Run Random data generation<a class="anchor-link" href="#Run-Random-data-generation">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2476,9 +2479,7 @@ X.data</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
@@ -2528,7 +2529,7 @@ X.data</div>
       <td>9.066664</td>
       <td>6.685522</td>
       <td>[1, 2, 3]</td>
-      <td>0.000029</td>
+      <td>0.000036</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -2586,9 +2587,7 @@ X.data</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
@@ -2638,7 +2637,7 @@ X.data</div>
       <td>9.066664</td>
       <td>6.685522</td>
       <td>[1, 2, 3]</td>
-      <td>0.000029</td>
+      <td>0.000036</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2652,7 +2651,7 @@ X.data</div>
       <td>1.045563</td>
       <td>0.507317</td>
       <td>[1, 2, 3]</td>
-      <td>0.000266</td>
+      <td>0.000067</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2666,7 +2665,7 @@ X.data</div>
       <td>7.510380</td>
       <td>4.902330</td>
       <td>[1, 2, 3]</td>
-      <td>0.000026</td>
+      <td>0.000341</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2680,7 +2679,7 @@ X.data</div>
       <td>5.920078</td>
       <td>4.141468</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000028</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2694,7 +2693,7 @@ X.data</div>
       <td>13.942816</td>
       <td>10.042213</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000027</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2708,7 +2707,7 @@ X.data</div>
       <td>0.068991</td>
       <td>0.363623</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000028</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2722,7 +2721,7 @@ X.data</div>
       <td>11.086588</td>
       <td>7.978659</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000027</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2736,7 +2735,7 @@ X.data</div>
       <td>0.768029</td>
       <td>0.522359</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000027</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2750,7 +2749,7 @@ X.data</div>
       <td>4.617362</td>
       <td>3.114340</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000027</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2764,7 +2763,7 @@ X.data</div>
       <td>-0.106956</td>
       <td>0.215769</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000028</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2778,7 +2777,7 @@ X.data</div>
       <td>8.326577</td>
       <td>5.696033</td>
       <td>[1, 2, 3]</td>
-      <td>0.000025</td>
+      <td>0.000026</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -2800,7 +2799,7 @@ X.data</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="plotting">Plotting<a class="anchor-link" href="#plotting">&#182;</a></h2><p>Plot the objective results</p>
+<h2 id="Plotting">Plotting<a class="anchor-link" href="#Plotting">&#182;</a></h2><p>Plot the objective results</p>
 
 </div>
 </div>
@@ -2846,9 +2845,7 @@ X.data.plot(*X.vocs.objective_names, kind="scatter")</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
@@ -2860,9 +2857,7 @@ X.data.plot(*X.vocs.objective_names, kind="scatter")</div>
 </div>
 
 </div>
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -2893,7 +2888,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="alternative-initialization-methods">Alternative initialization methods<a class="anchor-link" href="#alternative-initialization-methods">&#182;</a></h2><p>For convenience, if the first (and only) positional argument is present, then Xopt will automatically try to load from JSON, YAML str or files, or as a dict.</p>
+<h2 id="Alternative-initialization-methods">Alternative initialization methods<a class="anchor-link" href="#Alternative-initialization-methods">&#182;</a></h2><p>For convenience, if the first (and only) positional argument is present, then Xopt will automatically try to load from JSON, YAML str or files, or as a dict.</p>
 
 </div>
 </div>
@@ -2954,7 +2949,7 @@ X = Xopt(json.dumps(config, indent=4))
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="convenience-methods">Convenience Methods<a class="anchor-link" href="#convenience-methods">&#182;</a></h2>
+<h2 id="Convenience-Methods">Convenience Methods<a class="anchor-link" href="#Convenience-Methods">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -2997,9 +2992,7 @@ X.evaluate({'x1': .5, 'x2': 0.5})</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
@@ -3012,7 +3005,7 @@ X.evaluate({'x1': .5, 'x2': 0.5})</div>
  &#39;c1&#39;: -0.6,
  &#39;c2&#39;: 0.0,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 4.7799999947528704e-05,
+ &#39;xopt_runtime&#39;: 0.00010170200005177321,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -3062,9 +3055,7 @@ X.random_inputs()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
@@ -3126,9 +3117,7 @@ X.evaluate(X.random_inputs())</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
@@ -3141,7 +3130,7 @@ X.evaluate(X.random_inputs())</div>
  &#39;c1&#39;: 9.066663826202975,
  &#39;c2&#39;: 6.6855216379874784,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 4.169999988334894e-05,
+ &#39;xopt_runtime&#39;: 7.820099995115015e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -3193,9 +3182,7 @@ X.random_evaluate()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
@@ -3208,7 +3195,7 @@ X.random_evaluate()</div>
  &#39;c1&#39;: 9.066663826202975,
  &#39;c2&#39;: 6.6855216379874784,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 3.8599999925281736e-05,
+ &#39;xopt_runtime&#39;: 8.200199999919278e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -3226,7 +3213,7 @@ X.random_evaluate()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="logging">Logging<a class="anchor-link" href="#logging">&#182;</a></h2><p>Normally Xopt will not issue print statments, and instead issue logging messages. Below will enable these to be seen in the notebook</p>
+<h2 id="Logging">Logging<a class="anchor-link" href="#Logging">&#182;</a></h2><p>Normally Xopt will not issue print statments, and instead issue logging messages. Below will enable these to be seen in the notebook</p>
 
 </div>
 </div>
@@ -3304,9 +3291,7 @@ output_notebook()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 

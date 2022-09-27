@@ -1896,7 +1896,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="pydantic-based-executors">Pydantic-based executors<a class="anchor-link" href="#pydantic-based-executors">&#182;</a></h1><p>The <a href="https://peps.python.org/pep-3148/">PEP-3184</a> executor standard allows us to create an interface for executor objects and provide intelligent context for their execution. Pydantic validators allow the dynamic validation of executor initialization and execution based on signature inspection.</p>
+<h1 id="Pydantic-based-executors">Pydantic-based executors<a class="anchor-link" href="#Pydantic-based-executors">&#182;</a></h1><p>The <a href="https://peps.python.org/pep-3148/">PEP-3184</a> executor standard allows us to create an interface for executor objects and provide intelligent context for their execution. Pydantic validators allow the dynamic validation of executor initialization and execution based on signature inspection.</p>
 <p>Before you start, make sure you're using Pydantic &gt;= 1.9.0. 1.8 has all sorts of bugs with json encoder propagation.</p>
 
 </div>
@@ -1990,7 +1990,7 @@ def sdisplay(obj):
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="generics">GENERICS<a class="anchor-link" href="#generics">&#182;</a></h2><p>Because the executor classes take many forms, we'll be making use of Pydantic's generic class composition for executor type interpolation. We are able to do this by creating a placeholder TypeVar. Here, this is names ObjType, because the executor classes make use of a generalizable loading approach that could be extented to objects generally.</p>
+<h2 id="GENERICS">GENERICS<a class="anchor-link" href="#GENERICS">&#182;</a></h2><p>Because the executor classes take many forms, we'll be making use of Pydantic's generic class composition for executor type interpolation. We are able to do this by creating a placeholder TypeVar. Here, this is names ObjType, because the executor classes make use of a generalizable loading approach that could be extented to objects generally.</p>
 
 </div>
 </div>
@@ -2034,7 +2034,7 @@ def sdisplay(obj):
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="json-encoders">JSON Encoders<a class="anchor-link" href="#json-encoders">&#182;</a></h2><p>Pydantic does not propogate JSON encoders to child classes, so we'll define a set of common encoders:</p>
+<h2 id="JSON-Encoders">JSON Encoders<a class="anchor-link" href="#JSON-Encoders">&#182;</a></h2><p>Pydantic does not propogate JSON encoders to child classes, so we'll define a set of common encoders:</p>
 
 </div>
 </div>
@@ -2094,7 +2094,7 @@ def sdisplay(obj):
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="utility-functions-for-validating-signatures-and-getting-callables-from-strings">Utility functions for validating signatures and getting callables from strings<a class="anchor-link" href="#utility-functions-for-validating-signatures-and-getting-callables-from-strings">&#182;</a></h2><p>Central to generalizablity between executors is the ability to validate signatures args/kwargs against the executor class.</p>
+<h2 id="Utility-functions-for-validating-signatures-and-getting-callables-from-strings">Utility functions for validating signatures and getting callables from strings<a class="anchor-link" href="#Utility-functions-for-validating-signatures-and-getting-callables-from-strings">&#182;</a></h2><p>Central to generalizablity between executors is the ability to validate signatures args/kwargs against the executor class.</p>
 
 </div>
 </div>
@@ -2178,9 +2178,7 @@ validate_and_compose_signature(test_fn, y=5, x=2, hi=4)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
@@ -2205,7 +2203,7 @@ validate_and_compose_signature(test_fn, y=5, x=2, hi=4)</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="representing-callables-as-pydantic-models">Representing callables as Pydantic models<a class="anchor-link" href="#representing-callables-as-pydantic-models">&#182;</a></h2><p>Representing callables as pydantic models allows us to take advantage of both pydantic serialization to json and pydantic's validation hooks for the kwarg validation upon creation, with possibility of delaying load. Here <code>CallableModel</code>, we can provide initialization kwargs for a to-be-instantiated-later object and reap the benefit of additional kwarg validation.</p>
+<h2 id="Representing-callables-as-Pydantic-models">Representing callables as Pydantic models<a class="anchor-link" href="#Representing-callables-as-Pydantic-models">&#182;</a></h2><p>Representing callables as pydantic models allows us to take advantage of both pydantic serialization to json and pydantic's validation hooks for the kwarg validation upon creation, with possibility of delaying load. Here <code>CallableModel</code>, we can provide initialization kwargs for a to-be-instantiated-later object and reap the benefit of additional kwarg validation.</p>
 
 </div>
 </div>
@@ -2341,9 +2339,7 @@ fn.signature</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
@@ -2402,9 +2398,7 @@ fn.signature</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
@@ -2463,9 +2457,7 @@ fn.signature</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
@@ -2532,9 +2524,7 @@ fn.signature</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
@@ -2604,9 +2594,7 @@ fn_dict</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
@@ -2666,9 +2654,7 @@ fn_from_dict()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
@@ -2725,9 +2711,7 @@ fn.json() </div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
@@ -2786,9 +2770,7 @@ fn_from_json()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
@@ -2813,7 +2795,7 @@ fn_from_json()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="with-classes">With Classes<a class="anchor-link" href="#with-classes">&#182;</a></h1>
+<h1 id="With-Classes">With Classes<a class="anchor-link" href="#With-Classes">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -2896,9 +2878,7 @@ parameterized_class_dict</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
@@ -2957,9 +2937,7 @@ parameterized_class_from_dict</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
@@ -3052,9 +3030,7 @@ parameterized_class_json</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
@@ -3211,9 +3187,7 @@ loaded</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 
@@ -3221,7 +3195,7 @@ loaded</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;__main__.TestClass at 0x7fcf1065fa60&gt;</pre>
+<pre>&lt;__main__.TestClass at 0x7f2eaebac2e0&gt;</pre>
 </div>
 
 </div>
@@ -3307,7 +3281,7 @@ tpe.shutdown()
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="executors">Executors<a class="anchor-link" href="#executors">&#182;</a></h2><p>The previous classes were an attempt to demonstrate generic utility. The Executors to follow will build off of those common utilities to parameterize generic executors complying with the pep-3148 standard (the callables have been typified in case of deviation). Likewise, the following BaseExecutor outlines common executor fields and methods.</p>
+<h2 id="Executors">Executors<a class="anchor-link" href="#Executors">&#182;</a></h2><p>The previous classes were an attempt to demonstrate generic utility. The Executors to follow will build off of those common utilities to parameterize generic executors complying with the pep-3148 standard (the callables have been typified in case of deviation). Likewise, the following BaseExecutor outlines common executor fields and methods.</p>
 
 </div>
 </div>
@@ -3351,7 +3325,7 @@ tpe.shutdown()
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="normal-contextexecutor">Normal, ContextExecutor<a class="anchor-link" href="#normal-contextexecutor">&#182;</a></h2><p>Now, we subclass base to create two executors: <code>NormalExecutor</code>, and <code>ContextExecutor</code>. In the case that the user would like to create a persistent executor passed to the Evaluator, they would use the NormalExecutor. The ContextExecutor provides a context manager to dynamically create executor instances during execution.</p>
+<h2 id="Normal,-ContextExecutor">Normal, ContextExecutor<a class="anchor-link" href="#Normal,-ContextExecutor">&#182;</a></h2><p>Now, we subclass base to create two executors: <code>NormalExecutor</code>, and <code>ContextExecutor</code>. In the case that the user would like to create a persistent executor passed to the Evaluator, they would use the NormalExecutor. The ContextExecutor provides a context manager to dynamically create executor instances during execution.</p>
 
 </div>
 </div>
@@ -3417,9 +3391,7 @@ tpe_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 
@@ -3427,7 +3399,7 @@ tpe_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7fcef08f62b0 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7f2e8810f160 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -3476,9 +3448,7 @@ tpe_exec.map(test_function, ((1, 4), (3, 4)))</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 
@@ -3486,7 +3456,7 @@ tpe_exec.map(test_function, ((1, 4), (3, 4)))</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7fcef090e0b0&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f2e88128120&gt;</pre>
 </div>
 
 </div>
@@ -3589,9 +3559,7 @@ dask_executor.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
 
@@ -3599,7 +3567,7 @@ dask_executor.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7fcec0d44580 state=pending&gt;</pre>
+<pre>&lt;Future at 0x7f2e584b3dc0 state=pending&gt;</pre>
 </div>
 
 </div>
@@ -3648,9 +3616,7 @@ dask_executor_json</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
 
@@ -3892,9 +3858,7 @@ context_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
 
@@ -3902,7 +3866,7 @@ context_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7fceb8e6a610 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7f2e583b1430 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -3949,9 +3913,7 @@ context_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
 
@@ -3959,7 +3921,7 @@ context_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7fceb8e257b0&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f2e584005f0&gt;</pre>
 </div>
 
 </div>
@@ -4008,9 +3970,7 @@ context_exec_json</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
 
@@ -4071,9 +4031,7 @@ context_exec_from_json.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 
@@ -4081,7 +4039,7 @@ context_exec_from_json.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7fceb8f37e80 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7f2e583bc1c0 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -4128,9 +4086,7 @@ context_exec_from_json.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
 
@@ -4138,7 +4094,7 @@ context_exec_from_json.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7fceb8e25ba0&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f2e583db120&gt;</pre>
 </div>
 
 </div>
@@ -4216,9 +4172,7 @@ print(yaml.dump(yaml.safe_load(fn_json)))</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -4278,9 +4232,7 @@ fn_from_json</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
 
@@ -4288,7 +4240,7 @@ fn_from_json</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>CallableModel(callable=&lt;function evaluate at 0x7fceb8eac8b0&gt;, signature=Kwargs_evaluate(args=[], z=None, kwarg_order=[&#39;inputs&#39;, &#39;y&#39;, &#39;z&#39;], inputs=&#39;inspect._empty&#39;, y=100))</pre>
+<pre>CallableModel(callable=&lt;function evaluate at 0x7f2e583fec10&gt;, signature=Kwargs_evaluate(args=[], z=None, kwarg_order=[&#39;inputs&#39;, &#39;y&#39;, &#39;z&#39;], inputs=&#39;inspect._empty&#39;, y=100))</pre>
 </div>
 
 </div>
@@ -4335,9 +4287,7 @@ fn_from_json</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
 

@@ -1874,7 +1874,7 @@ Licensed under the Apache License, Version 2.0.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="vocs-data-structure">VOCS data structure<a class="anchor-link" href="#vocs-data-structure">&#182;</a></h1><p>Variables, Objectives, Constraints, and other Settings (VOCS) helps define our optimization problems.</p>
+<h1 id="VOCS-data-structure">VOCS data structure<a class="anchor-link" href="#VOCS-data-structure">&#182;</a></h1><p>Variables, Objectives, Constraints, and other Settings (VOCS) helps define our optimization problems.</p>
 
 </div>
 </div>
@@ -1948,9 +1948,7 @@ Licensed under the Apache License, Version 2.0.
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
 <div class="jp-OutputArea-child">
-
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
@@ -2072,7 +2070,7 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |  ----------------------------------------------------------------------
  |  Static methods defined here:
  |  
- |  __json_encoder__ = functools.partial(&lt;cyfunction custom_pydantic_en...loat64&#39;&gt;: &lt;function &lt;lambda&gt; at 0x7f49dcd9c4c0&gt;})
+ |  __json_encoder__ = functools.partial(&lt;cyfunction custom_pydantic_en...loat64&#39;&gt;: &lt;function &lt;lambda&gt; at 0x7fc220bcf5e0&gt;})
  |  ----------------------------------------------------------------------
  |  Readonly properties defined here:
  |  
@@ -2327,9 +2325,7 @@ vocs</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
@@ -2386,9 +2382,7 @@ vocs.dict()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
@@ -2483,9 +2477,7 @@ vocs2 == vocs</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
@@ -2542,9 +2534,7 @@ getattr(vocs, "variables")</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
@@ -2599,9 +2589,7 @@ getattr(vocs, "variables")</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
@@ -2658,9 +2646,7 @@ vocs.json()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
@@ -2685,7 +2671,7 @@ vocs.json()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="objective-evaluation">Objective Evaluation<a class="anchor-link" href="#objective-evaluation">&#182;</a></h1>
+<h1 id="Objective-Evaluation">Objective Evaluation<a class="anchor-link" href="#Objective-Evaluation">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -2748,9 +2734,7 @@ data</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
@@ -2787,103 +2771,103 @@ data</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>506.636479</td>
-      <td>0.667760</td>
+      <td>365.574565</td>
+      <td>-0.018056</td>
       <td>1234</td>
-      <td>507.304238</td>
-      <td>505.968719</td>
-      <td>1014.608477</td>
-      <td>1011.937439</td>
+      <td>365.556509</td>
+      <td>365.592622</td>
+      <td>731.113017</td>
+      <td>731.185243</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>152.301764</td>
-      <td>0.023577</td>
+      <td>819.900525</td>
+      <td>0.041602</td>
       <td>1234</td>
-      <td>152.325340</td>
-      <td>152.278187</td>
-      <td>304.650681</td>
-      <td>304.556374</td>
+      <td>819.942127</td>
+      <td>819.858923</td>
+      <td>1639.884254</td>
+      <td>1639.717846</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>185.361621</td>
-      <td>0.696086</td>
+      <td>731.767864</td>
+      <td>-0.315567</td>
       <td>1234</td>
-      <td>186.057707</td>
-      <td>184.665535</td>
-      <td>372.115415</td>
-      <td>369.331070</td>
+      <td>731.452298</td>
+      <td>732.083431</td>
+      <td>1462.904595</td>
+      <td>1464.166862</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>49.845530</td>
-      <td>-0.249583</td>
+      <td>546.543586</td>
+      <td>0.112684</td>
       <td>1234</td>
-      <td>49.595947</td>
-      <td>50.095113</td>
-      <td>99.191895</td>
-      <td>100.190226</td>
+      <td>546.656270</td>
+      <td>546.430902</td>
+      <td>1093.312539</td>
+      <td>1092.861805</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>690.964246</td>
-      <td>0.610607</td>
+      <td>677.475534</td>
+      <td>-0.674057</td>
       <td>1234</td>
-      <td>691.574853</td>
-      <td>690.353639</td>
-      <td>1383.149706</td>
-      <td>1380.707278</td>
+      <td>676.801478</td>
+      <td>678.149591</td>
+      <td>1353.602955</td>
+      <td>1356.299182</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>167.512794</td>
-      <td>0.388685</td>
+      <td>338.943626</td>
+      <td>0.751237</td>
       <td>1234</td>
-      <td>167.901479</td>
-      <td>167.124109</td>
-      <td>335.802958</td>
-      <td>334.248218</td>
+      <td>339.694863</td>
+      <td>338.192390</td>
+      <td>679.389727</td>
+      <td>676.384779</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>556.228101</td>
-      <td>-0.969469</td>
+      <td>727.589913</td>
+      <td>0.443055</td>
       <td>1234</td>
-      <td>555.258632</td>
-      <td>557.197570</td>
-      <td>1110.517264</td>
-      <td>1114.395141</td>
+      <td>728.032968</td>
+      <td>727.146859</td>
+      <td>1456.065936</td>
+      <td>1454.293718</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>642.568237</td>
-      <td>0.413190</td>
+      <td>542.968493</td>
+      <td>-0.156737</td>
       <td>1234</td>
-      <td>642.981427</td>
-      <td>642.155047</td>
-      <td>1285.962853</td>
-      <td>1284.310094</td>
+      <td>542.811756</td>
+      <td>543.125230</td>
+      <td>1085.623512</td>
+      <td>1086.250459</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>18.979329</td>
-      <td>0.235460</td>
+      <td>588.755712</td>
+      <td>-0.250515</td>
       <td>1234</td>
-      <td>19.214789</td>
-      <td>18.743870</td>
-      <td>38.429579</td>
-      <td>37.487739</td>
+      <td>588.505197</td>
+      <td>589.006227</td>
+      <td>1177.010394</td>
+      <td>1178.012455</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>766.412698</td>
-      <td>-0.561206</td>
+      <td>622.891734</td>
+      <td>-0.131375</td>
       <td>1234</td>
-      <td>765.851491</td>
-      <td>766.973904</td>
-      <td>1531.702983</td>
-      <td>1533.947809</td>
+      <td>622.760360</td>
+      <td>623.023109</td>
+      <td>1245.520719</td>
+      <td>1246.046218</td>
     </tr>
   </tbody>
 </table>
@@ -2934,9 +2918,7 @@ data</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
@@ -2993,9 +2975,7 @@ form_objective_data(vocs.objectives, data)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
@@ -3027,53 +3007,53 @@ form_objective_data(vocs.objectives, data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-507.304238</td>
-      <td>505.968719</td>
+      <td>-365.556509</td>
+      <td>365.592622</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-152.325340</td>
-      <td>152.278187</td>
+      <td>-819.942127</td>
+      <td>819.858923</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-186.057707</td>
-      <td>184.665535</td>
+      <td>-731.452298</td>
+      <td>732.083431</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-49.595947</td>
-      <td>50.095113</td>
+      <td>-546.656270</td>
+      <td>546.430902</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-691.574853</td>
-      <td>690.353639</td>
+      <td>-676.801478</td>
+      <td>678.149591</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-167.901479</td>
-      <td>167.124109</td>
+      <td>-339.694863</td>
+      <td>338.192390</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-555.258632</td>
-      <td>557.197570</td>
+      <td>-728.032968</td>
+      <td>727.146859</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-642.981427</td>
-      <td>642.155047</td>
+      <td>-542.811756</td>
+      <td>543.125230</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-19.214789</td>
-      <td>18.743870</td>
+      <td>-588.505197</td>
+      <td>589.006227</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-765.851491</td>
-      <td>766.973904</td>
+      <td>-622.760360</td>
+      <td>623.023109</td>
     </tr>
   </tbody>
 </table>
@@ -3126,9 +3106,7 @@ vocs.objective_data(data)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
@@ -3160,53 +3138,53 @@ vocs.objective_data(data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-507.304238</td>
-      <td>505.968719</td>
+      <td>-365.556509</td>
+      <td>365.592622</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-152.325340</td>
-      <td>152.278187</td>
+      <td>-819.942127</td>
+      <td>819.858923</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-186.057707</td>
-      <td>184.665535</td>
+      <td>-731.452298</td>
+      <td>732.083431</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-49.595947</td>
-      <td>50.095113</td>
+      <td>-546.656270</td>
+      <td>546.430902</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-691.574853</td>
-      <td>690.353639</td>
+      <td>-676.801478</td>
+      <td>678.149591</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-167.901479</td>
-      <td>167.124109</td>
+      <td>-339.694863</td>
+      <td>338.192390</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-555.258632</td>
-      <td>557.197570</td>
+      <td>-728.032968</td>
+      <td>727.146859</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-642.981427</td>
-      <td>642.155047</td>
+      <td>-542.811756</td>
+      <td>543.125230</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-19.214789</td>
-      <td>18.743870</td>
+      <td>-588.505197</td>
+      <td>589.006227</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-765.851491</td>
-      <td>766.973904</td>
+      <td>-622.760360</td>
+      <td>623.023109</td>
     </tr>
   </tbody>
 </table>
@@ -3259,9 +3237,7 @@ vocs.objective_data(data).to_numpy()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
@@ -3269,16 +3245,16 @@ vocs.objective_data(data).to_numpy()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[-507.30423839,  505.9687193 ],
-       [-152.3253404 ,  152.27818685],
-       [-186.05770743,  184.66553502],
-       [ -49.59594744,   50.09511276],
-       [-691.57485303,  690.35363901],
-       [-167.901479  ,  167.12410911],
-       [-555.25863218,  557.19757036],
-       [-642.98142664,  642.15504712],
-       [ -19.21478929,   18.74386963],
-       [-765.85149136,  766.97390434]])</pre>
+<pre>array([[-365.55650856,  365.59262156],
+       [-819.94212721,  819.85892311],
+       [-731.45229767,  732.08343117],
+       [-546.65626951,  546.43090244],
+       [-676.80147754,  678.14959107],
+       [-339.69486327,  338.19238967],
+       [-728.032968  ,  727.14685895],
+       [-542.81175604,  543.12522969],
+       [-588.50519682,  589.00622744],
+       [-622.76035973,  623.02310903]])</pre>
 </div>
 
 </div>
@@ -3325,9 +3301,7 @@ vocs.objective_data(data).to_numpy()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
@@ -3359,53 +3333,53 @@ vocs.objective_data(data).to_numpy()</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>1012.608477</td>
-      <td>-1011.937439</td>
+      <td>729.113017</td>
+      <td>-731.185243</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>302.650681</td>
-      <td>-304.556374</td>
+      <td>1637.884254</td>
+      <td>-1639.717846</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>370.115415</td>
-      <td>-369.331070</td>
+      <td>1460.904595</td>
+      <td>-1464.166862</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>97.191895</td>
-      <td>-100.190226</td>
+      <td>1091.312539</td>
+      <td>-1092.861805</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>1381.149706</td>
-      <td>-1380.707278</td>
+      <td>1351.602955</td>
+      <td>-1356.299182</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>333.802958</td>
-      <td>-334.248218</td>
+      <td>677.389727</td>
+      <td>-676.384779</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>1108.517264</td>
-      <td>-1114.395141</td>
+      <td>1454.065936</td>
+      <td>-1454.293718</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>1283.962853</td>
-      <td>-1284.310094</td>
+      <td>1083.623512</td>
+      <td>-1086.250459</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>36.429579</td>
-      <td>-37.487739</td>
+      <td>1175.010394</td>
+      <td>-1178.012455</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>1529.702983</td>
-      <td>-1533.947809</td>
+      <td>1243.520719</td>
+      <td>-1246.046218</td>
     </tr>
   </tbody>
 </table>
@@ -3456,9 +3430,7 @@ vocs.objective_data(data).to_numpy()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
@@ -3568,7 +3540,7 @@ vocs.objective_data(data).to_numpy()</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="error-handling">Error handling<a class="anchor-link" href="#error-handling">&#182;</a></h1>
+<h1 id="Error-handling">Error handling<a class="anchor-link" href="#Error-handling">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -3683,9 +3655,7 @@ df2['b'] - 1</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
@@ -3783,9 +3753,7 @@ f()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
@@ -3840,9 +3808,7 @@ f()</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
 
@@ -3940,9 +3906,7 @@ form_objective_data(vocs.objectives, data)</div>
 
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
 
