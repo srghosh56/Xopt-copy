@@ -571,8 +571,64 @@
   
   
     <li class="md-nav__item">
+      <a href="../../expected_improvement_rosenbrock.ipynb" class="md-nav__link">
+        Expected improvement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom_model.ipynb" class="md-nav__link">
+        Custom GP models
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../bayes_opt/mobo/" class="md-nav__link">
         Multi-objective Bayesian Optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mggpo.ipynb" class="md-nav__link">
+        Multi-generation gaussian process optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../time_dependent_bo.ipynb" class="md-nav__link">
+        Time dependent upper confidence bound
       </a>
     </li>
   
@@ -2265,7 +2321,7 @@ X</div>
 <pre>
             Xopt
 ________________________________
-Version: 0+untagged.1.g1792911
+Version: 0+untagged.1.geee556a
 Data size: 0
 Config as YAML:
 xopt: {asynch: false, strict: false, dump_file: null, max_evaluations: null}
@@ -2340,16 +2396,16 @@ vocs:
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;y1&#39;: array([1.59554391, 2.25595841, 1.8391896 , 1.41734166, 0.11884293,
-        1.34535721, 2.66166895, 0.88540328, 2.18221354, 2.56146128]),
- &#39;y2&#39;: array([2.88674228, 1.11540628, 2.48569451, 1.4727048 , 2.94296693,
-        0.77793444, 2.67975834, 2.63494479, 1.76798286, 0.42705479]),
- &#39;c1&#39;: array([ 9.90133393,  5.28491369,  8.63326641,  3.08237625,  7.59531379,
-         1.46608565, 13.16573312,  6.68119905,  6.89789292,  5.83129765]),
- &#39;c2&#39;: array([6.89675515, 3.46211481, 5.73641147, 1.78767035, 6.11336811,
-        0.79187636, 9.42415907, 4.70652493, 4.43762293, 4.25494363]),
+<pre>{&#39;y1&#39;: array([0.79536347, 2.72881951, 1.24447184, 1.69916985, 2.86314455,
+        1.57886529, 1.39040192, 2.84505766, 2.63377656, 1.49456563]),
+ &#39;y2&#39;: array([0.32100454, 0.82042238, 2.3395808 , 0.08039431, 1.49244697,
+        2.38662364, 0.86492946, 2.86052951, 1.14450787, 2.2025127 ]),
+ &#39;c1&#39;: array([-0.36329549,  7.12350036,  6.01912208,  1.82091424,  9.40849115,
+         7.28851747,  1.76805627, 15.17707627,  7.15045436,  6.18413467]),
+ &#39;c2&#39;: array([ 0.11927896,  5.07030693,  3.93829583,  1.61407725,  6.56940313,
+         4.72329907,  0.92598908, 11.07139499,  4.96839279,  3.88771028]),
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 6.610100001580577e-05,
+ &#39;xopt_runtime&#39;: 7.550099996933568e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -2528,7 +2584,7 @@ X.data</div>
       <td>9.066664</td>
       <td>6.685522</td>
       <td>[1, 2, 3]</td>
-      <td>0.000053</td>
+      <td>0.000043</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -2636,7 +2692,7 @@ X.data</div>
       <td>9.066664</td>
       <td>6.685522</td>
       <td>[1, 2, 3]</td>
-      <td>0.000053</td>
+      <td>0.000043</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2650,7 +2706,7 @@ X.data</div>
       <td>1.045563</td>
       <td>0.507317</td>
       <td>[1, 2, 3]</td>
-      <td>0.000035</td>
+      <td>0.000043</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2664,7 +2720,7 @@ X.data</div>
       <td>7.510380</td>
       <td>4.902330</td>
       <td>[1, 2, 3]</td>
-      <td>0.000024</td>
+      <td>0.000038</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2678,7 +2734,7 @@ X.data</div>
       <td>5.920078</td>
       <td>4.141468</td>
       <td>[1, 2, 3]</td>
-      <td>0.000024</td>
+      <td>0.000036</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2692,7 +2748,7 @@ X.data</div>
       <td>13.942816</td>
       <td>10.042213</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000024</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2706,7 +2762,7 @@ X.data</div>
       <td>0.068991</td>
       <td>0.363623</td>
       <td>[1, 2, 3]</td>
-      <td>0.000024</td>
+      <td>0.000025</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2720,7 +2776,7 @@ X.data</div>
       <td>11.086588</td>
       <td>7.978659</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000025</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2734,7 +2790,7 @@ X.data</div>
       <td>0.768029</td>
       <td>0.522359</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000024</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2762,7 +2818,7 @@ X.data</div>
       <td>-0.106956</td>
       <td>0.215769</td>
       <td>[1, 2, 3]</td>
-      <td>0.000023</td>
+      <td>0.000025</td>
       <td>False</td>
     </tr>
     <tr>
@@ -2776,7 +2832,7 @@ X.data</div>
       <td>8.326577</td>
       <td>5.696033</td>
       <td>[1, 2, 3]</td>
-      <td>0.000024</td>
+      <td>0.000025</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -3004,7 +3060,7 @@ X.evaluate({'x1': .5, 'x2': 0.5})</div>
  &#39;c1&#39;: -0.6,
  &#39;c2&#39;: 0.0,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 0.00016900200000691257,
+ &#39;xopt_runtime&#39;: 5.1400999950601545e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -3129,7 +3185,7 @@ X.evaluate(X.random_inputs())</div>
  &#39;c1&#39;: 9.066663826202975,
  &#39;c2&#39;: 6.6855216379874784,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 7.390100006432476e-05,
+ &#39;xopt_runtime&#39;: 5.3100999934940774e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -3194,7 +3250,7 @@ X.random_evaluate()</div>
  &#39;c1&#39;: 9.066663826202975,
  &#39;c2&#39;: 6.6855216379874784,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 5.140100006428838e-05,
+ &#39;xopt_runtime&#39;: 4.7501000040028885e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 

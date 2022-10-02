@@ -491,8 +491,64 @@
   
   
     <li class="md-nav__item">
+      <a href="../../expected_improvement_rosenbrock.ipynb" class="md-nav__link">
+        Expected improvement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom_model.ipynb" class="md-nav__link">
+        Custom GP models
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../bayes_opt/mobo/" class="md-nav__link">
         Multi-objective Bayesian Optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mggpo.ipynb" class="md-nav__link">
+        Multi-generation gaussian process optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../time_dependent_bo.ipynb" class="md-nav__link">
+        Time dependent upper confidence bound
       </a>
     </li>
   
@@ -1945,7 +2001,7 @@ generators.keys()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>dict_keys([&#39;upper_confidence_bound&#39;, &#39;mobo&#39;, &#39;bayesian_exploration&#39;, &#39;cnsga&#39;, &#39;random&#39;, &#39;neldermead&#39;, &#39;time_dependent_upper_confidence_bound&#39;, &#39;expected_improvement&#39;])</pre>
+<pre>dict_keys([&#39;upper_confidence_bound&#39;, &#39;mobo&#39;, &#39;bayesian_exploration&#39;, &#39;cnsga&#39;, &#39;random&#39;, &#39;neldermead&#39;, &#39;time_dependent_upper_confidence_bound&#39;, &#39;expected_improvement&#39;, &#39;mggpo&#39;])</pre>
 </div>
 
 </div>
@@ -2120,7 +2176,7 @@ generator.options</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>UCBOptions(optim=OptimOptions(num_restarts=5, raw_samples=20, sequential=True, use_nearby_initial_points=True, max_travel_distances=None), acq=UpperConfidenceBoundOptions(proximal_lengthscales=None, use_transformed_proximal_weights=True, monte_carlo_samples=128, beta=1.0), model=ModelOptions(function=&lt;function create_standard_model at 0x7f917c38a280&gt;, kwargs=kwargs(use_conservative_prior_lengthscale=False, use_conservative_prior_mean=False, use_low_noise_prior=False)), n_initial=1)</pre>
+<pre>UCBOptions(optim=OptimOptions(num_restarts=5, raw_samples=20, sequential=True, use_nearby_initial_points=True, max_travel_distances=None), acq=UpperConfidenceBoundOptions(proximal_lengthscales=None, use_transformed_proximal_weights=True, monte_carlo_samples=128, beta=1.0), model=ModelOptions(function=&lt;function create_standard_model at 0x7f90e8283280&gt;, kwargs=kwargs(use_conservative_prior_lengthscale=False, use_conservative_prior_mean=False, use_low_noise_prior=False)), n_initial=1)</pre>
 </div>
 
 </div>
@@ -2348,30 +2404,30 @@ for i in range(4):
   <tbody>
     <tr>
       <th>1</th>
-      <td>5.651808</td>
-      <td>-0.590257</td>
-      <td>0.000009</td>
+      <td>4.454778</td>
+      <td>-9.670013e-01</td>
+      <td>0.000010</td>
       <td>False</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000009</td>
+      <td>0.000000e+00</td>
+      <td>0.000010</td>
       <td>False</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.933407</td>
-      <td>-0.711629</td>
-      <td>0.000008</td>
+      <td>6.283185</td>
+      <td>-2.449294e-16</td>
+      <td>0.000010</td>
       <td>False</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>4.478497</td>
-      <td>-0.972772</td>
-      <td>0.000009</td>
+      <td>3.367587</td>
+      <td>-2.240754e-01</td>
+      <td>0.000011</td>
       <td>False</td>
     </tr>
   </tbody>

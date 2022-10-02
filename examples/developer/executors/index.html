@@ -491,8 +491,64 @@
   
   
     <li class="md-nav__item">
+      <a href="../../expected_improvement_rosenbrock.ipynb" class="md-nav__link">
+        Expected improvement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom_model.ipynb" class="md-nav__link">
+        Custom GP models
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../bayes_opt/mobo/" class="md-nav__link">
         Multi-objective Bayesian Optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mggpo.ipynb" class="md-nav__link">
+        Multi-generation gaussian process optimization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../time_dependent_bo.ipynb" class="md-nav__link">
+        Time dependent upper confidence bound
       </a>
     </li>
   
@@ -3195,7 +3251,7 @@ loaded</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;__main__.TestClass at 0x7f71742dc1c0&gt;</pre>
+<pre>&lt;__main__.TestClass at 0x7fa85fdb9f40&gt;</pre>
 </div>
 
 </div>
@@ -3399,7 +3455,7 @@ tpe_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7f71742f1640 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7fa85fd81b20 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -3456,7 +3512,7 @@ tpe_exec.map(test_function, ((1, 4), (3, 4)))</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f7174309120&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7fa85fda04a0&gt;</pre>
 </div>
 
 </div>
@@ -3567,7 +3623,7 @@ dask_executor.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7f7128d70fa0 state=pending&gt;</pre>
+<pre>&lt;Future at 0x7fa835e96340 state=pending&gt;</pre>
 </div>
 
 </div>
@@ -3866,7 +3922,7 @@ context_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7f7128c64520 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7fa834034250 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -3921,7 +3977,7 @@ context_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f7128cb4eb0&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7fa83402a7b0&gt;</pre>
 </div>
 
 </div>
@@ -4039,7 +4095,7 @@ context_exec_from_json.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7f7128c6f2e0 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7fa834034cd0 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -4094,7 +4150,7 @@ context_exec_from_json.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f7128c58580&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7fa83402aeb0&gt;</pre>
 </div>
 
 </div>
@@ -4240,7 +4296,7 @@ fn_from_json</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>CallableModel(callable=&lt;function evaluate at 0x7f7128e38b80&gt;, signature=Kwargs_evaluate(args=[], z=None, kwarg_order=[&#39;inputs&#39;, &#39;y&#39;, &#39;z&#39;], inputs=&#39;inspect._empty&#39;, y=100))</pre>
+<pre>CallableModel(callable=&lt;function evaluate at 0x7fa8881f3700&gt;, signature=Kwargs_evaluate(args=[], z=None, kwarg_order=[&#39;inputs&#39;, &#39;y&#39;, &#39;z&#39;], inputs=&#39;inspect._empty&#39;, y=100))</pre>
 </div>
 
 </div>
