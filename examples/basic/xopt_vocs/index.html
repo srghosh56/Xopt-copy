@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.2">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
@@ -17,10 +17,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.9f9400aa.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -114,6 +114,7 @@
         
           
           
+          
           <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -121,6 +122,7 @@
             </label>
           
         
+          
           
           
           <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
@@ -595,6 +597,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_2_2">
@@ -608,6 +612,20 @@
           Bayesian Optimization
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bayes_opt/bo_tutorial/" class="md-nav__link">
+        Bayesian optimization tutorial
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -629,8 +647,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../expected_improvement_rosenbrock.ipynb" class="md-nav__link">
-        Expected improvement
+      <a href="../../bayes_opt/expected_improvement_rosenbrock/" class="md-nav__link">
+        Expected Improvement BO
       </a>
     </li>
   
@@ -643,8 +661,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../custom_model.ipynb" class="md-nav__link">
-        Custom GP models
+      <a href="../../bayes_opt/custom_model/" class="md-nav__link">
+        Custom GP modeling for BO
       </a>
     </li>
   
@@ -671,8 +689,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mggpo.ipynb" class="md-nav__link">
-        Multi-generation gaussian process optimization
+      <a href="../../bayes_opt/mggpo/" class="md-nav__link">
+        Multi-objective Bayesian Optimization
       </a>
     </li>
   
@@ -685,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../time_dependent_bo.ipynb" class="md-nav__link">
+      <a href="../../bayes_opt/time_dependent_bo/" class="md-nav__link">
         Time dependent upper confidence bound
       </a>
     </li>
@@ -2329,7 +2347,7 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |  ----------------------------------------------------------------------
  |  Static methods defined here:
  |  
- |  __json_encoder__ = functools.partial(&lt;cyfunction custom_pydantic_en...loat64&#39;&gt;: &lt;function &lt;lambda&gt; at 0x7f069a391790&gt;})
+ |  __json_encoder__ = functools.partial(&lt;cyfunction custom_pydantic_en...loat64&#39;&gt;: &lt;function &lt;lambda&gt; at 0x7ff9c2be89d0&gt;})
  |  ----------------------------------------------------------------------
  |  Readonly properties defined here:
  |  
@@ -3030,103 +3048,103 @@ data</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>188.970056</td>
-      <td>-0.792101</td>
+      <td>326.288851</td>
+      <td>0.817893</td>
       <td>1234</td>
-      <td>188.177954</td>
-      <td>189.762157</td>
-      <td>376.355909</td>
-      <td>379.524314</td>
+      <td>327.106744</td>
+      <td>325.470958</td>
+      <td>654.213487</td>
+      <td>650.941916</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>3.480680</td>
-      <td>-0.939362</td>
+      <td>881.370993</td>
+      <td>0.317580</td>
       <td>1234</td>
-      <td>2.541318</td>
-      <td>4.420042</td>
-      <td>5.082635</td>
-      <td>8.840084</td>
+      <td>881.688573</td>
+      <td>881.053413</td>
+      <td>1763.377146</td>
+      <td>1762.106826</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>287.940322</td>
-      <td>0.334659</td>
+      <td>226.047076</td>
+      <td>0.358377</td>
       <td>1234</td>
-      <td>288.274981</td>
-      <td>287.605663</td>
-      <td>576.549961</td>
-      <td>575.211325</td>
+      <td>226.405454</td>
+      <td>225.688699</td>
+      <td>452.810908</td>
+      <td>451.377398</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>868.124521</td>
-      <td>0.541603</td>
+      <td>387.891672</td>
+      <td>0.077304</td>
       <td>1234</td>
-      <td>868.666124</td>
-      <td>867.582918</td>
-      <td>1737.332248</td>
-      <td>1735.165836</td>
+      <td>387.968976</td>
+      <td>387.814368</td>
+      <td>775.937953</td>
+      <td>775.628736</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>855.707474</td>
-      <td>-0.703046</td>
+      <td>477.010988</td>
+      <td>-0.716738</td>
       <td>1234</td>
-      <td>855.004428</td>
-      <td>856.410519</td>
-      <td>1710.008856</td>
-      <td>1712.821038</td>
+      <td>476.294250</td>
+      <td>477.727726</td>
+      <td>952.588500</td>
+      <td>955.455452</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>799.588032</td>
-      <td>0.350950</td>
+      <td>477.860344</td>
+      <td>-0.813095</td>
       <td>1234</td>
-      <td>799.938983</td>
-      <td>799.237082</td>
-      <td>1599.877965</td>
-      <td>1598.474164</td>
+      <td>477.047249</td>
+      <td>478.673439</td>
+      <td>954.094499</td>
+      <td>957.346879</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>297.915733</td>
-      <td>-0.739705</td>
+      <td>439.342534</td>
+      <td>0.921111</td>
       <td>1234</td>
-      <td>297.176028</td>
-      <td>298.655437</td>
-      <td>594.352056</td>
-      <td>597.310875</td>
+      <td>440.263645</td>
+      <td>438.421423</td>
+      <td>880.527291</td>
+      <td>876.842846</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>199.045937</td>
-      <td>0.230079</td>
+      <td>214.091136</td>
+      <td>0.766921</td>
       <td>1234</td>
-      <td>199.276016</td>
-      <td>198.815858</td>
-      <td>398.552033</td>
-      <td>397.631716</td>
+      <td>214.858057</td>
+      <td>213.324215</td>
+      <td>429.716115</td>
+      <td>426.648429</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>900.562662</td>
-      <td>0.874427</td>
+      <td>42.593514</td>
+      <td>-0.791643</td>
       <td>1234</td>
-      <td>901.437089</td>
-      <td>899.688236</td>
-      <td>1802.874179</td>
-      <td>1799.376471</td>
+      <td>41.801871</td>
+      <td>43.385156</td>
+      <td>83.603742</td>
+      <td>86.770313</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>277.106852</td>
-      <td>0.665110</td>
+      <td>197.185743</td>
+      <td>-0.735811</td>
       <td>1234</td>
-      <td>277.771962</td>
-      <td>276.441742</td>
-      <td>555.543925</td>
-      <td>552.883484</td>
+      <td>196.449933</td>
+      <td>197.921554</td>
+      <td>392.899865</td>
+      <td>395.843108</td>
     </tr>
   </tbody>
 </table>
@@ -3266,53 +3284,53 @@ form_objective_data(vocs.objectives, data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-188.177954</td>
-      <td>189.762157</td>
+      <td>-327.106744</td>
+      <td>325.470958</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-2.541318</td>
-      <td>4.420042</td>
+      <td>-881.688573</td>
+      <td>881.053413</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-288.274981</td>
-      <td>287.605663</td>
+      <td>-226.405454</td>
+      <td>225.688699</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-868.666124</td>
-      <td>867.582918</td>
+      <td>-387.968976</td>
+      <td>387.814368</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-855.004428</td>
-      <td>856.410519</td>
+      <td>-476.294250</td>
+      <td>477.727726</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-799.938983</td>
-      <td>799.237082</td>
+      <td>-477.047249</td>
+      <td>478.673439</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-297.176028</td>
-      <td>298.655437</td>
+      <td>-440.263645</td>
+      <td>438.421423</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-199.276016</td>
-      <td>198.815858</td>
+      <td>-214.858057</td>
+      <td>213.324215</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-901.437089</td>
-      <td>899.688236</td>
+      <td>-41.801871</td>
+      <td>43.385156</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-277.771962</td>
-      <td>276.441742</td>
+      <td>-196.449933</td>
+      <td>197.921554</td>
     </tr>
   </tbody>
 </table>
@@ -3397,53 +3415,53 @@ vocs.objective_data(data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-188.177954</td>
-      <td>189.762157</td>
+      <td>-327.106744</td>
+      <td>325.470958</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-2.541318</td>
-      <td>4.420042</td>
+      <td>-881.688573</td>
+      <td>881.053413</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-288.274981</td>
-      <td>287.605663</td>
+      <td>-226.405454</td>
+      <td>225.688699</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-868.666124</td>
-      <td>867.582918</td>
+      <td>-387.968976</td>
+      <td>387.814368</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-855.004428</td>
-      <td>856.410519</td>
+      <td>-476.294250</td>
+      <td>477.727726</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-799.938983</td>
-      <td>799.237082</td>
+      <td>-477.047249</td>
+      <td>478.673439</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-297.176028</td>
-      <td>298.655437</td>
+      <td>-440.263645</td>
+      <td>438.421423</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-199.276016</td>
-      <td>198.815858</td>
+      <td>-214.858057</td>
+      <td>213.324215</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-901.437089</td>
-      <td>899.688236</td>
+      <td>-41.801871</td>
+      <td>43.385156</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-277.771962</td>
-      <td>276.441742</td>
+      <td>-196.449933</td>
+      <td>197.921554</td>
     </tr>
   </tbody>
 </table>
@@ -3504,16 +3522,16 @@ vocs.objective_data(data).to_numpy()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[-188.17795435,  189.76215713],
-       [  -2.54131759,    4.42004193],
-       [-288.27498067,  287.60566254],
-       [-868.66612425,  867.58291785],
-       [-855.00442789,  856.41051923],
-       [-799.93898255,  799.23708194],
-       [-297.17602783,  298.65543739],
-       [-199.27601641,  198.81585794],
-       [-901.43708925,  899.68823574],
-       [-277.77196247,  276.44174185]])</pre>
+<pre>array([[-327.10674359,  325.4709582 ],
+       [-881.68857294,  881.05341304],
+       [-226.40545375,  225.68869898],
+       [-387.96897628,  387.81436817],
+       [-476.29425009,  477.72772619],
+       [-477.04724933,  478.67343937],
+       [-440.26364538,  438.42142296],
+       [-214.8580573 ,  213.32421451],
+       [ -41.80187076,   43.38515646],
+       [-196.44993257,  197.92155409]])</pre>
 </div>
 
 </div>
@@ -3592,53 +3610,53 @@ vocs.objective_data(data).to_numpy()</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>374.355909</td>
-      <td>-379.524314</td>
+      <td>652.213487</td>
+      <td>-650.941916</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>3.082635</td>
-      <td>-8.840084</td>
+      <td>1761.377146</td>
+      <td>-1762.106826</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>574.549961</td>
-      <td>-575.211325</td>
+      <td>450.810908</td>
+      <td>-451.377398</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>1735.332248</td>
-      <td>-1735.165836</td>
+      <td>773.937953</td>
+      <td>-775.628736</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>1708.008856</td>
-      <td>-1712.821038</td>
+      <td>950.588500</td>
+      <td>-955.455452</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>1597.877965</td>
-      <td>-1598.474164</td>
+      <td>952.094499</td>
+      <td>-957.346879</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>592.352056</td>
-      <td>-597.310875</td>
+      <td>878.527291</td>
+      <td>-876.842846</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>396.552033</td>
-      <td>-397.631716</td>
+      <td>427.716115</td>
+      <td>-426.648429</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>1800.874179</td>
-      <td>-1799.376471</td>
+      <td>81.603742</td>
+      <td>-86.770313</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>553.543925</td>
-      <td>-552.883484</td>
+      <td>390.899865</td>
+      <td>-395.843108</td>
     </tr>
   </tbody>
 </table>
@@ -4315,10 +4333,10 @@ form_objective_data(vocs.objectives, data)</div>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.39f04ddb.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
     
   </body>
