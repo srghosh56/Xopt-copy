@@ -15,7 +15,7 @@
         <link rel="next" href="../xopt_parallel/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
     
     
       
@@ -63,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
   
     
     
@@ -115,25 +115,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
           
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
           
-        
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -2680,7 +2686,7 @@ X</div>
 <pre>
             Xopt
 ________________________________
-Version: 0+untagged.1.ga47af82
+Version: 0+untagged.1.g0676a82
 Data size: 0
 Config as YAML:
 xopt: {asynch: false, strict: false, dump_file: null, max_evaluations: null}
@@ -2755,16 +2761,16 @@ vocs:
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;y1&#39;: array([2.22458274, 0.11750487, 1.14805041, 0.13475336, 1.16133736,
-        1.44939045, 0.84171703, 2.4462159 , 1.67986065, 2.8133758 ]),
- &#39;y2&#39;: array([2.78890026, 2.886782  , 1.84527253, 0.25240146, 1.20155301,
-        1.91057942, 0.97134265, 1.85363692, 3.02412443, 0.02174141]),
- &#39;c1&#39;: array([11.74881105,  7.26776454,  3.80983565, -0.91891437,  1.6961183 ,
-         4.80847427,  0.6104151 ,  8.47807989, 10.99284776,  6.81631947]),
- &#39;c2&#39;: array([8.21325   , 5.84303083, 2.22972751, 0.19471014, 0.92954373,
-        2.89107652, 0.33893443, 5.62008925, 7.76327529, 5.58043885]),
+<pre>{&#39;y1&#39;: array([2.81863406, 1.80933485, 1.11249386, 0.78804525, 2.69370684,
+        0.81625261, 2.70308876, 1.17711646, 2.96119474, 0.71287878]),
+ &#39;y2&#39;: array([2.00019006, 3.03696234, 2.21231784, 2.47605414, 0.3531604 ,
+        1.11801641, 0.19463116, 2.01139436, 1.36517456, 0.34172747]),
+ &#39;c1&#39;: array([11.03551207, 11.56447459,  5.09314228,  5.73026226,  6.4300322 ,
+         0.99489567,  6.30372751,  4.48923173,  9.551486  , -0.43959712]),
+ &#39;c2&#39;: array([7.62663412, 8.15053565, 3.30718113, 3.98776003, 4.83391157,
+        0.48196   , 4.94685021, 2.74279963, 6.80600658, 0.07036757]),
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 8.06020000254648e-05,
+ &#39;xopt_runtime&#39;: 7.770000001983135e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -2943,7 +2949,7 @@ X.data</div>
       <td>9.066664</td>
       <td>6.685522</td>
       <td>[1, 2, 3]</td>
-      <td>0.000039</td>
+      <td>0.000044</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -3051,7 +3057,7 @@ X.data</div>
       <td>9.066664</td>
       <td>6.685522</td>
       <td>[1, 2, 3]</td>
-      <td>0.000039</td>
+      <td>0.000044</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3065,7 +3071,7 @@ X.data</div>
       <td>1.045563</td>
       <td>0.507317</td>
       <td>[1, 2, 3]</td>
-      <td>0.000076</td>
+      <td>0.000323</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3079,7 +3085,7 @@ X.data</div>
       <td>7.510380</td>
       <td>4.902330</td>
       <td>[1, 2, 3]</td>
-      <td>0.000044</td>
+      <td>0.000045</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3093,7 +3099,7 @@ X.data</div>
       <td>5.920078</td>
       <td>4.141468</td>
       <td>[1, 2, 3]</td>
-      <td>0.000158</td>
+      <td>0.000044</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3107,7 +3113,7 @@ X.data</div>
       <td>13.942816</td>
       <td>10.042213</td>
       <td>[1, 2, 3]</td>
-      <td>0.000039</td>
+      <td>0.000036</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3121,7 +3127,7 @@ X.data</div>
       <td>0.068991</td>
       <td>0.363623</td>
       <td>[1, 2, 3]</td>
-      <td>0.000038</td>
+      <td>0.000033</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3135,7 +3141,7 @@ X.data</div>
       <td>11.086588</td>
       <td>7.978659</td>
       <td>[1, 2, 3]</td>
-      <td>0.000036</td>
+      <td>0.000032</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3149,7 +3155,7 @@ X.data</div>
       <td>0.768029</td>
       <td>0.522359</td>
       <td>[1, 2, 3]</td>
-      <td>0.000036</td>
+      <td>0.000032</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3163,7 +3169,7 @@ X.data</div>
       <td>4.617362</td>
       <td>3.114340</td>
       <td>[1, 2, 3]</td>
-      <td>0.000028</td>
+      <td>0.000034</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3177,7 +3183,7 @@ X.data</div>
       <td>-0.106956</td>
       <td>0.215769</td>
       <td>[1, 2, 3]</td>
-      <td>0.000029</td>
+      <td>0.000034</td>
       <td>False</td>
     </tr>
     <tr>
@@ -3191,7 +3197,7 @@ X.data</div>
       <td>8.326577</td>
       <td>5.696033</td>
       <td>[1, 2, 3]</td>
-      <td>0.000029</td>
+      <td>0.000031</td>
       <td>False</td>
     </tr>
   </tbody>
@@ -3418,7 +3424,7 @@ X.evaluate({'x1': .5, 'x2': 0.5})</div>
  &#39;c1&#39;: -0.6,
  &#39;c2&#39;: 0.0,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 8.480100007091096e-05,
+ &#39;xopt_runtime&#39;: 5.7600999980422785e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -3543,7 +3549,7 @@ X.evaluate(X.random_inputs())</div>
  &#39;c1&#39;: 9.066663826202975,
  &#39;c2&#39;: 6.6855216379874784,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 7.590199993501301e-05,
+ &#39;xopt_runtime&#39;: 6.47020000315024e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
@@ -3608,7 +3614,7 @@ X.random_evaluate()</div>
  &#39;c1&#39;: 9.066663826202975,
  &#39;c2&#39;: 6.6855216379874784,
  &#39;some_array&#39;: array([1, 2, 3]),
- &#39;xopt_runtime&#39;: 7.200199991075351e-05,
+ &#39;xopt_runtime&#39;: 5.1501000029929855e-05,
  &#39;xopt_error&#39;: False}</pre>
 </div>
 
