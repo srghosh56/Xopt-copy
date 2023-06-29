@@ -15,7 +15,7 @@
         <link rel="next" href="../../bayes_exp/bayesian_exploration/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -690,8 +690,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../single_objective_bayes_opt/expected_improvement_rosenbrock/" class="md-nav__link">
-        Expected Improvement BO
+      <a href="../../single_objective_bayes_opt/expected_improvement_rosenbrock.ipynb" class="md-nav__link">
+        Expected improvement
       </a>
     </li>
   
@@ -761,7 +761,7 @@
   
     <li class="md-nav__item">
       <a href="../../single_objective_bayes_opt/bax_tutorial/" class="md-nav__link">
-        Imports and random seeding for reproducibility
+        Basic Optimization using BAX
       </a>
     </li>
   
@@ -2394,7 +2394,7 @@ Licensed under the Apache License, Version 2.0.
 <pre>Help on class VOCS in module xopt.vocs:
 
 class VOCS(xopt.pydantic.XoptBaseModel)
- |  VOCS(*, variables: Dict[str, types.ConstrainedListValue] = {}, constraints: Dict[str, types.ConstrainedListValue] = {}, objectives: Dict[str, xopt.vocs.ObjectiveEnum] = {}, constants: Dict[str, Any] = {}, linked_variables: Dict[str, str] = {}) -&gt; None
+ |  VOCS(*, variables: Dict[str, types.ConstrainedListValue] = {}, constraints: Dict[str, types.ConstrainedListValue] = {}, objectives: Dict[str, xopt.vocs.ObjectiveEnum] = {}, constants: Dict[str, Any] = {}, observables: List[str] = []) -&gt; None
  |  
  |  Variables, Objectives, Constraints, and other Settings (VOCS) data structure
  |  to describe optimization problems.
@@ -2467,7 +2467,17 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |      Returns:
  |          result: processed Dataframe
  |  
- |  random_inputs(self, n=None, include_constants=True, include_linked_variables=True, seed=None)
+ |  observable_data(self, data: Union[pandas.core.frame.DataFrame, List[Dict]], prefix: str = &#39;observable_&#39;) -&gt; pandas.core.frame.DataFrame
+ |      Returns a dataframe containing observable data
+ |      
+ |      Args:
+ |          data: data to be processed.
+ |          prefix: prefix added to column names.
+ |      
+ |      Returns:
+ |          result: processed Dataframe
+ |  
+ |  random_inputs(self, n: int = None, custom_bounds: dict = None, include_constants: bool = True, seed: int = None)
  |      Uniform sampling of the variables.
  |      
  |      Returns a dict of inputs.
@@ -2541,6 +2551,9 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |  n_objectives
  |      Returns the number of objectives
  |  
+ |  n_observables
+ |      Returns the number of constraints
+ |  
  |  n_outputs
  |      Returns the number of outputs (objectives and constraints)
  |  
@@ -2549,6 +2562,8 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |  
  |  objective_names
  |      Returns a sorted list of objective names
+ |  
+ |  observable_names
  |  
  |  output_names
  |      Returns a sorted list of objective and constraint names (objectives first
@@ -2588,9 +2603,15 @@ class VOCS(xopt.pydantic.XoptBaseModel)
  |  
  |  __schema_cache__ = {}
  |  
- |  __signature__ = &lt;Signature (*, variables: Dict[str, types.Constr..., l...
+ |  __signature__ = &lt;Signature (*, variables: Dict[str, types.Constr... An...
  |  
- |  __validators__ = {}
+ |  __validators__ = {&#39;*&#39;: [&lt;pydantic.class_validators.Validator object&gt;]}
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from xopt.pydantic.XoptBaseModel:
+ |  
+ |  validate_files(value) from pydantic.main.ModelMetaclass
+ |      # root validator to process files
  |  
  |  ----------------------------------------------------------------------
  |  Methods inherited from pydantic.main.BaseModel:
@@ -2774,7 +2795,7 @@ vocs</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>VOCS(variables={&#39;a&#39;: [0.0, 1000.0], &#39;b&#39;: [-1.0, 1.0]}, constraints={&#39;e&#39;: [&#39;LESS_THAN&#39;, 2.0], &#39;f&#39;: [&#39;GREATER_THAN&#39;, 0.0]}, objectives={&#39;c&#39;: &#39;MAXIMIZE&#39;, &#39;d&#39;: &#39;MINIMIZE&#39;}, constants={&#39;g&#39;: 1234}, linked_variables={})</pre>
+<pre>VOCS(variables={&#39;a&#39;: [0.0, 1000.0], &#39;b&#39;: [-1.0, 1.0]}, constraints={&#39;e&#39;: [&#39;LESS_THAN&#39;, 2.0], &#39;f&#39;: [&#39;GREATER_THAN&#39;, 0.0]}, objectives={&#39;c&#39;: &#39;MAXIMIZE&#39;, &#39;d&#39;: &#39;MINIMIZE&#39;}, constants={&#39;g&#39;: 1234}, observables=[])</pre>
 </div>
 
 </div>
@@ -2835,7 +2856,7 @@ vocs.dict()</div>
  &#39;constraints&#39;: {&#39;e&#39;: [&#39;LESS_THAN&#39;, 2.0], &#39;f&#39;: [&#39;GREATER_THAN&#39;, 0.0]},
  &#39;objectives&#39;: {&#39;c&#39;: &#39;MAXIMIZE&#39;, &#39;d&#39;: &#39;MINIMIZE&#39;},
  &#39;constants&#39;: {&#39;g&#39;: 1234},
- &#39;linked_variables&#39;: {}}</pre>
+ &#39;observables&#39;: []}</pre>
 </div>
 
 </div>
@@ -3095,7 +3116,7 @@ vocs.json()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;{&#34;variables&#34;:{&#34;a&#34;:[0.0,1000.0],&#34;b&#34;:[-1.0,1.0]},&#34;constraints&#34;:{&#34;e&#34;:[&#34;LESS_THAN&#34;,2.0],&#34;f&#34;:[&#34;GREATER_THAN&#34;,0.0]},&#34;objectives&#34;:{&#34;c&#34;:&#34;MAXIMIZE&#34;,&#34;d&#34;:&#34;MINIMIZE&#34;},&#34;constants&#34;:{&#34;g&#34;:1234},&#34;linked_variables&#34;:{}}&#39;</pre>
+<pre>&#39;{&#34;variables&#34;:{&#34;a&#34;:[0.0,1000.0],&#34;b&#34;:[-1.0,1.0]},&#34;constraints&#34;:{&#34;e&#34;:[&#34;LESS_THAN&#34;,2.0],&#34;f&#34;:[&#34;GREATER_THAN&#34;,0.0]},&#34;objectives&#34;:{&#34;c&#34;:&#34;MAXIMIZE&#34;,&#34;d&#34;:&#34;MINIMIZE&#34;},&#34;constants&#34;:{&#34;g&#34;:1234},&#34;observables&#34;:[]}&#39;</pre>
 </div>
 
 </div>
@@ -3212,103 +3233,103 @@ data</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>635.037215</td>
-      <td>-0.794270</td>
+      <td>803.554816</td>
+      <td>-0.491638</td>
       <td>1234</td>
-      <td>634.242945</td>
-      <td>635.831485</td>
-      <td>1268.485890</td>
-      <td>1271.662969</td>
+      <td>803.063178</td>
+      <td>804.046455</td>
+      <td>1606.126356</td>
+      <td>1608.092910</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>520.156135</td>
-      <td>-0.180829</td>
+      <td>625.929413</td>
+      <td>0.629283</td>
       <td>1234</td>
-      <td>519.975306</td>
-      <td>520.336964</td>
-      <td>1039.950611</td>
-      <td>1040.673929</td>
+      <td>626.558696</td>
+      <td>625.300130</td>
+      <td>1253.117391</td>
+      <td>1250.600260</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>795.342290</td>
-      <td>0.893088</td>
+      <td>684.101982</td>
+      <td>0.283373</td>
       <td>1234</td>
-      <td>796.235378</td>
-      <td>794.449202</td>
-      <td>1592.470755</td>
-      <td>1588.898405</td>
+      <td>684.385356</td>
+      <td>683.818609</td>
+      <td>1368.770712</td>
+      <td>1367.637218</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>664.109546</td>
-      <td>0.654381</td>
+      <td>3.897689</td>
+      <td>0.627432</td>
       <td>1234</td>
-      <td>664.763928</td>
-      <td>663.455165</td>
-      <td>1329.527856</td>
-      <td>1326.910330</td>
+      <td>4.525121</td>
+      <td>3.270257</td>
+      <td>9.050242</td>
+      <td>6.540515</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>635.636453</td>
-      <td>0.955410</td>
+      <td>477.115934</td>
+      <td>-0.800970</td>
       <td>1234</td>
-      <td>636.591863</td>
-      <td>634.681043</td>
-      <td>1273.183726</td>
-      <td>1269.362086</td>
+      <td>476.314965</td>
+      <td>477.916904</td>
+      <td>952.629929</td>
+      <td>955.833807</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>246.337287</td>
-      <td>0.769750</td>
+      <td>45.293285</td>
+      <td>0.926330</td>
       <td>1234</td>
-      <td>247.107037</td>
-      <td>245.567538</td>
-      <td>494.214073</td>
-      <td>491.135075</td>
+      <td>46.219615</td>
+      <td>44.366955</td>
+      <td>92.439230</td>
+      <td>88.733910</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>940.220179</td>
-      <td>-0.121430</td>
+      <td>708.919774</td>
+      <td>-0.738897</td>
       <td>1234</td>
-      <td>940.098749</td>
-      <td>940.341609</td>
-      <td>1880.197498</td>
-      <td>1880.683217</td>
+      <td>708.180876</td>
+      <td>709.658671</td>
+      <td>1416.361752</td>
+      <td>1419.317342</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>696.057154</td>
-      <td>0.524155</td>
+      <td>668.944002</td>
+      <td>-0.442189</td>
       <td>1234</td>
-      <td>696.581309</td>
-      <td>695.532999</td>
-      <td>1393.162617</td>
-      <td>1391.065999</td>
+      <td>668.501813</td>
+      <td>669.386191</td>
+      <td>1337.003627</td>
+      <td>1338.772383</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>67.012123</td>
-      <td>-0.578614</td>
+      <td>480.793091</td>
+      <td>-0.435247</td>
       <td>1234</td>
-      <td>66.433509</td>
-      <td>67.590738</td>
-      <td>132.867018</td>
-      <td>135.181475</td>
+      <td>480.357844</td>
+      <td>481.228338</td>
+      <td>960.715688</td>
+      <td>962.456676</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>861.652545</td>
-      <td>-0.416825</td>
+      <td>226.815163</td>
+      <td>0.196367</td>
       <td>1234</td>
-      <td>861.235720</td>
-      <td>862.069370</td>
-      <td>1722.471439</td>
-      <td>1724.138741</td>
+      <td>227.011530</td>
+      <td>226.618796</td>
+      <td>454.023061</td>
+      <td>453.237591</td>
     </tr>
   </tbody>
 </table>
@@ -3448,53 +3469,53 @@ form_objective_data(vocs.objectives, data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-634.242945</td>
-      <td>635.831485</td>
+      <td>-803.063178</td>
+      <td>804.046455</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-519.975306</td>
-      <td>520.336964</td>
+      <td>-626.558696</td>
+      <td>625.300130</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-796.235378</td>
-      <td>794.449202</td>
+      <td>-684.385356</td>
+      <td>683.818609</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-664.763928</td>
-      <td>663.455165</td>
+      <td>-4.525121</td>
+      <td>3.270257</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-636.591863</td>
-      <td>634.681043</td>
+      <td>-476.314965</td>
+      <td>477.916904</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-247.107037</td>
-      <td>245.567538</td>
+      <td>-46.219615</td>
+      <td>44.366955</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-940.098749</td>
-      <td>940.341609</td>
+      <td>-708.180876</td>
+      <td>709.658671</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-696.581309</td>
-      <td>695.532999</td>
+      <td>-668.501813</td>
+      <td>669.386191</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-66.433509</td>
-      <td>67.590738</td>
+      <td>-480.357844</td>
+      <td>481.228338</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-861.235720</td>
-      <td>862.069370</td>
+      <td>-227.011530</td>
+      <td>226.618796</td>
     </tr>
   </tbody>
 </table>
@@ -3579,53 +3600,53 @@ vocs.objective_data(data)</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>-634.242945</td>
-      <td>635.831485</td>
+      <td>-803.063178</td>
+      <td>804.046455</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>-519.975306</td>
-      <td>520.336964</td>
+      <td>-626.558696</td>
+      <td>625.300130</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>-796.235378</td>
-      <td>794.449202</td>
+      <td>-684.385356</td>
+      <td>683.818609</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>-664.763928</td>
-      <td>663.455165</td>
+      <td>-4.525121</td>
+      <td>3.270257</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>-636.591863</td>
-      <td>634.681043</td>
+      <td>-476.314965</td>
+      <td>477.916904</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>-247.107037</td>
-      <td>245.567538</td>
+      <td>-46.219615</td>
+      <td>44.366955</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>-940.098749</td>
-      <td>940.341609</td>
+      <td>-708.180876</td>
+      <td>709.658671</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>-696.581309</td>
-      <td>695.532999</td>
+      <td>-668.501813</td>
+      <td>669.386191</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>-66.433509</td>
-      <td>67.590738</td>
+      <td>-480.357844</td>
+      <td>481.228338</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>-861.235720</td>
-      <td>862.069370</td>
+      <td>-227.011530</td>
+      <td>226.618796</td>
     </tr>
   </tbody>
 </table>
@@ -3686,16 +3707,16 @@ vocs.objective_data(data).to_numpy()</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[-634.24294476,  635.83148451],
-       [-519.97530569,  520.33696434],
-       [-796.2353777 ,  794.44920243],
-       [-664.76392779,  663.455165  ],
-       [-636.59186299,  634.68104324],
-       [-247.10703674,  245.56753754],
-       [-940.0987489 ,  940.34160864],
-       [-696.58130865,  695.53299941],
-       [ -66.43350907,   67.59073767],
-       [-861.23571962,  862.06937037]])</pre>
+<pre>array([[-803.06317818,  804.04645477],
+       [-626.55869572,  625.30013003],
+       [-684.38535595,  683.81860903],
+       [  -4.52512109,    3.2702574 ],
+       [-476.31496453,  477.91690353],
+       [ -46.21961477,   44.36695478],
+       [-708.18087622,  709.65867116],
+       [-668.50181339,  669.38619131],
+       [-480.35784384,  481.22833784],
+       [-227.0115303 ,  226.61879555]])</pre>
 </div>
 
 </div>
@@ -3774,53 +3795,53 @@ vocs.objective_data(data).to_numpy()</div>
   <tbody>
     <tr>
       <th>5</th>
-      <td>1266.485890</td>
-      <td>-1271.662969</td>
+      <td>1604.126356</td>
+      <td>-1608.092910</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>1037.950611</td>
-      <td>-1040.673929</td>
+      <td>1251.117391</td>
+      <td>-1250.600260</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>1590.470755</td>
-      <td>-1588.898405</td>
+      <td>1366.770712</td>
+      <td>-1367.637218</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>1327.527856</td>
-      <td>-1326.910330</td>
+      <td>7.050242</td>
+      <td>-6.540515</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>1271.183726</td>
-      <td>-1269.362086</td>
+      <td>950.629929</td>
+      <td>-955.833807</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>492.214073</td>
-      <td>-491.135075</td>
+      <td>90.439230</td>
+      <td>-88.733910</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>1878.197498</td>
-      <td>-1880.683217</td>
+      <td>1414.361752</td>
+      <td>-1419.317342</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>1391.162617</td>
-      <td>-1391.065999</td>
+      <td>1335.003627</td>
+      <td>-1338.772383</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>130.867018</td>
-      <td>-135.181475</td>
+      <td>958.715688</td>
+      <td>-962.456676</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>1720.471439</td>
-      <td>-1724.138741</td>
+      <td>452.023061</td>
+      <td>-453.237591</td>
     </tr>
   </tbody>
 </table>
@@ -4466,7 +4487,7 @@ form_objective_data(vocs.objectives, data)</div>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   </body>

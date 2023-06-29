@@ -15,7 +15,7 @@
         <link rel="next" href="../../rcds/rcds/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -678,8 +678,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../single_objective_bayes_opt/expected_improvement_rosenbrock/" class="md-nav__link">
-        Expected Improvement BO
+      <a href="../../single_objective_bayes_opt/expected_improvement_rosenbrock.ipynb" class="md-nav__link">
+        Expected improvement
       </a>
     </li>
   
@@ -749,7 +749,7 @@
   
     <li class="md-nav__item">
       <a href="../../single_objective_bayes_opt/bax_tutorial/" class="md-nav__link">
-        Imports and random seeding for reproducibility
+        Basic Optimization using BAX
       </a>
     </li>
   
@@ -2564,7 +2564,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'</div>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div id="cell-id=38cb1e1a" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div id="cell-id=67955b8b" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2820,6 +2820,8 @@ def f_ES_minimize(input_dict):
 <span class="s2">&quot;&quot;&quot;</span>
 
 <span class="n">X</span> <span class="o">=</span> <span class="n">Xopt</span><span class="p">(</span><span class="n">YAML</span><span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">max_evaluations</span> <span class="o">=</span> <span class="n">NUM_STEPS</span>
+
 <span class="n">X</span>
 </pre></div>
 <div id="cell-5" class="clipboard-copy-txt">YAML = """
@@ -2849,6 +2851,8 @@ vocs:
 """
 
 X = Xopt(YAML)
+X.options.max_evaluations = NUM_STEPS
+
 X</div>
         
         </div>
@@ -2874,7 +2878,7 @@ X</div>
 <pre>
             Xopt
 ________________________________
-Version: 0+untagged.1.g0fc2832
+Version: 0+untagged.1.g31da5da
 Data size: 0
 Config as YAML:
 xopt: {asynch: false, strict: false, dump_file: null, max_evaluations: 5000}
@@ -2899,7 +2903,7 @@ vocs:
   constraints: {}
   objectives: {f: MINIMIZE}
   constants: {}
-  linked_variables: {}
+  observables: []
 </pre>
 </div>
 
@@ -3074,7 +3078,7 @@ vocs = VOCS(
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>VOCS(variables={&#39;p0&#39;: [-2.0, 2.0], &#39;p1&#39;: [-2.0, 2.0], &#39;p2&#39;: [-2.0, 2.0], &#39;p3&#39;: [-2.0, 2.0], &#39;p4&#39;: [-2.0, 2.0], &#39;p5&#39;: [-2.0, 2.0], &#39;p6&#39;: [-2.0, 2.0], &#39;p7&#39;: [-2.0, 2.0], &#39;p8&#39;: [-2.0, 2.0], &#39;p9&#39;: [-2.0, 2.0]}, constraints={}, objectives={&#39;f&#39;: &#39;MINIMIZE&#39;}, constants={}, linked_variables={})</pre>
+<pre>VOCS(variables={&#39;p0&#39;: [-2.0, 2.0], &#39;p1&#39;: [-2.0, 2.0], &#39;p2&#39;: [-2.0, 2.0], &#39;p3&#39;: [-2.0, 2.0], &#39;p4&#39;: [-2.0, 2.0], &#39;p5&#39;: [-2.0, 2.0], &#39;p6&#39;: [-2.0, 2.0], &#39;p7&#39;: [-2.0, 2.0], &#39;p8&#39;: [-2.0, 2.0], &#39;p9&#39;: [-2.0, 2.0]}, constraints={}, objectives={&#39;f&#39;: &#39;MINIMIZE&#39;}, constants={}, observables=[])</pre>
 </div>
 
 </div>
@@ -3159,9 +3163,9 @@ vocs = VOCS(
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">ExtremumSeekingGenerator</span><span class="p">(</span><span class="n">vocs</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">ExtremumSeekingGenerator</span><span class="p">(</span><span class="n">vocs</span><span class="o">=</span><span class="n">vocs</span><span class="p">)</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">generator = ExtremumSeekingGenerator(vocs)</div>
+<div id="cell-10" class="clipboard-copy-txt">generator = ExtremumSeekingGenerator(vocs=vocs)</div>
         
         </div>
     </div>
@@ -3171,7 +3175,7 @@ vocs = VOCS(
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div id="cell-id=39bb9d21-2f9f-4a5a-a7b0-cd877da16c59" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div id="cell-id=2e679d3f" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3191,9 +3195,9 @@ vocs = VOCS(
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">generator</span><span class="o">.</span><span class="n">options</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">generator</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt">generator.options</div>
+<div id="cell-11" class="clipboard-copy-txt">generator.dict()</div>
         
         </div>
     </div>
@@ -3215,7 +3219,7 @@ vocs = VOCS(
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>ExtremumSeekingOptions(k=2.0, oscillation_size=0.1, decay_rate=1.0)</pre>
+<pre>{&#39;k&#39;: 2.0, &#39;oscillation_size&#39;: 0.1, &#39;decay_rate&#39;: 1.0}</pre>
 </div>
 
 </div>
@@ -3372,12 +3376,12 @@ for i in tqdm(range(NUM_STEPS)):
 
 
 
-<div id="c498335f-4896-4912-9e76-2f6b4a53be2e" class="jupyter-widgets jp-OutputArea-output ">
+<div id="30af4d31-31de-4885-9a63-004bd434efc0" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('c498335f-4896-4912-9e76-2f6b4a53be2e');
+var element = document.getElementById('30af4d31-31de-4885-9a63-004bd434efc0');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "9b371e4eb4a542a5bed71bc61ce86b1e", "version_major": 2, "version_minor": 0}
+{"model_id": "8eb1dc0f03bb40459aa2d13e79f01135", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -3732,7 +3736,7 @@ class="
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   </body>

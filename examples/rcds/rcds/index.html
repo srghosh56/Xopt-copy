@@ -15,7 +15,7 @@
         <link rel="next" href="../../../api/xopt/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -678,8 +678,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../single_objective_bayes_opt/expected_improvement_rosenbrock/" class="md-nav__link">
-        Expected Improvement BO
+      <a href="../../single_objective_bayes_opt/expected_improvement_rosenbrock.ipynb" class="md-nav__link">
+        Expected improvement
       </a>
     </li>
   
@@ -749,7 +749,7 @@
   
     <li class="md-nav__item">
       <a href="../../single_objective_bayes_opt/bax_tutorial/" class="md-nav__link">
-        Imports and random seeding for reproducibility
+        Basic Optimization using BAX
       </a>
     </li>
   
@@ -2774,7 +2774,7 @@ X</div>
 <pre>
             Xopt
 ________________________________
-Version: 0+untagged.1.g0fc2832
+Version: 0+untagged.1.g31da5da
 Data size: 0
 Config as YAML:
 xopt: {asynch: false, strict: false, dump_file: null, max_evaluations: 400}
@@ -2791,7 +2791,7 @@ vocs:
   constraints: {}
   objectives: {f: MINIMIZE}
   constants: {}
-  linked_variables: {}
+  observables: []
 </pre>
 </div>
 
@@ -2992,7 +2992,7 @@ vocs = VOCS(
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>VOCS(variables={&#39;p0&#39;: [0.0, 1.0], &#39;p1&#39;: [0.0, 1.0]}, constraints={}, objectives={&#39;f&#39;: &#39;MINIMIZE&#39;}, constants={}, linked_variables={})</pre>
+<pre>VOCS(variables={&#39;p0&#39;: [0.0, 1.0], &#39;p1&#39;: [0.0, 1.0]}, constraints={}, objectives={&#39;f&#39;: &#39;MINIMIZE&#39;}, constants={}, observables=[])</pre>
 </div>
 
 </div>
@@ -3057,7 +3057,7 @@ vocs = VOCS(
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div id="cell-id=41528444-1571-4760-9228-1f1de0267ada" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div id="cell-id=445daa23-5f97-4a82-bd59-57d9cbae6ac1" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3077,9 +3077,9 @@ vocs = VOCS(
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">options</span> <span class="o">=</span> <span class="n">RCDSGenerator</span><span class="o">.</span><span class="n">default_options</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">RCDSGenerator</span><span class="p">(</span><span class="n">vocs</span><span class="o">=</span><span class="n">vocs</span><span class="p">)</span>
 </pre></div>
-<div id="cell-10" class="clipboard-copy-txt">options = RCDSGenerator.default_options()</div>
+<div id="cell-10" class="clipboard-copy-txt">generator = RCDSGenerator(vocs=vocs)</div>
         
         </div>
     </div>
@@ -3089,7 +3089,7 @@ vocs = VOCS(
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div id="cell-id=955ad8ae-bd33-4ad0-bf9c-5844a1c16443" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div id="cell-id=346fad29" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3109,9 +3109,9 @@ vocs = VOCS(
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">options</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">generator</span><span class="o">.</span><span class="n">dict</span><span class="p">()</span>
 </pre></div>
-<div id="cell-11" class="clipboard-copy-txt">options.dict()</div>
+<div id="cell-11" class="clipboard-copy-txt">generator.dict()</div>
         
         </div>
     </div>
@@ -3143,8 +3143,19 @@ vocs = VOCS(
 </div>
 
 </div>
+</div>
+<div id="cell-id=f4981983-1e64-43a1-ac90-f88546f9650a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="run-the-optimization">Run the optimization<a class="anchor-link" href="#run-the-optimization">&#182;</a></h4>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div id="cell-id=445daa23-5f97-4a82-bd59-57d9cbae6ac1" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div id="cell-id=10c77281-f49c-4cf7-bb2d-8a278cf00e23" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3164,9 +3175,9 @@ vocs = VOCS(
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">RCDSGenerator</span><span class="p">(</span><span class="n">vocs</span><span class="p">,</span> <span class="n">options</span><span class="p">)</span>
+            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">Xopt</span><span class="p">(</span><span class="n">vocs</span><span class="o">=</span><span class="n">vocs</span><span class="p">,</span> <span class="n">evaluator</span><span class="o">=</span><span class="n">evaluator</span><span class="p">,</span> <span class="n">generator</span><span class="o">=</span><span class="n">generator</span><span class="p">)</span>
 </pre></div>
-<div id="cell-12" class="clipboard-copy-txt">generator = RCDSGenerator(vocs, options)</div>
+<div id="cell-12" class="clipboard-copy-txt">X = Xopt(vocs=vocs, evaluator=evaluator, generator=generator)</div>
         
         </div>
     </div>
@@ -3175,19 +3186,8 @@ vocs = VOCS(
 </div>
 
 </div>
-</div>
-<div id="cell-id=f4981983-1e64-43a1-ac90-f88546f9650a" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="run-the-optimization">Run the optimization<a class="anchor-link" href="#run-the-optimization">&#182;</a></h4>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div id="cell-id=10c77281-f49c-4cf7-bb2d-8a278cf00e23" class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div id="cell-id=78b104b2-7b6b-40b6-9a5c-f84b0e547403" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -3207,44 +3207,12 @@ vocs = VOCS(
                     </div>
                 </clipboard-copy>
             </div>
-            <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">Xopt</span><span class="p">(</span><span class="n">vocs</span><span class="o">=</span><span class="n">vocs</span><span class="p">,</span> <span class="n">evaluator</span><span class="o">=</span><span class="n">evaluator</span><span class="p">,</span> <span class="n">generator</span><span class="o">=</span><span class="n">generator</span><span class="p">)</span>
-</pre></div>
-<div id="cell-13" class="clipboard-copy-txt">X = Xopt(vocs=vocs, evaluator=evaluator, generator=generator)</div>
-        
-        </div>
-    </div>
-
-</div>
-</div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div id="cell-id=78b104b2-7b6b-40b6-9a5c-f84b0e547403" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-        
-        
-        <div class="CodeMirror cm-s-jupyter">
-            <div class="zeroclipboard-container">
-                <clipboard-copy for="cell-14">
-                <div>
-                    <span class="notice" hidden>Copied!</span>
-                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
-                        <path fill="currentColor" fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path>
-                        <path fill="currentColor" fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
-                    </svg>
-                    </div>
-                </clipboard-copy>
-            </div>
             <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">max_eval</span> <span class="o">=</span> <span class="mi">400</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">max_eval</span><span class="p">)):</span>
     <span class="n">X</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
 </pre></div>
-<div id="cell-14" class="clipboard-copy-txt">max_eval = 400
+<div id="cell-13" class="clipboard-copy-txt">max_eval = 400
 
 for i in tqdm(range(max_eval)):
     X.step()</div>
@@ -3271,12 +3239,12 @@ for i in tqdm(range(max_eval)):
 
 
 
-<div id="b1118023-aceb-4db3-87a1-2d7992e2cdd4" class="jupyter-widgets jp-OutputArea-output ">
+<div id="0a9dcfbc-750f-4912-92f5-318e75b0ccee" class="jupyter-widgets jp-OutputArea-output ">
 <script type="text/javascript">
-var element = document.getElementById('b1118023-aceb-4db3-87a1-2d7992e2cdd4');
+var element = document.getElementById('0a9dcfbc-750f-4912-92f5-318e75b0ccee');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "a538b60601b34722a90cbd4154fd25fd", "version_major": 2, "version_minor": 0}
+{"model_id": "64556c8cb3d84dbe943b2118d792b213", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -3304,12 +3272,12 @@ var element = document.getElementById('b1118023-aceb-4db3-87a1-2d7992e2cdd4');
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
         
         
         <div class="CodeMirror cm-s-jupyter">
             <div class="zeroclipboard-container">
-                <clipboard-copy for="cell-15">
+                <clipboard-copy for="cell-14">
                 <div>
                     <span class="notice" hidden>Copied!</span>
                     <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3321,7 +3289,7 @@ var element = document.getElementById('b1118023-aceb-4db3-87a1-2d7992e2cdd4');
             </div>
             <div class="highlight-ipynb hl-python "><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
 </pre></div>
-<div id="cell-15" class="clipboard-copy-txt">X.data.plot(y='f')</div>
+<div id="cell-14" class="clipboard-copy-txt">X.data.plot(y='f')</div>
         
         </div>
     </div>
@@ -3337,7 +3305,7 @@ var element = document.getElementById('b1118023-aceb-4db3-87a1-2d7992e2cdd4');
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -3379,7 +3347,7 @@ class="
         
         <div class="CodeMirror cm-s-jupyter">
             <div class="zeroclipboard-container">
-                <clipboard-copy for="cell-16">
+                <clipboard-copy for="cell-15">
                 <div>
                     <span class="notice" hidden>Copied!</span>
                     <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
@@ -3391,7 +3359,7 @@ class="
             </div>
             <div class="highlight-ipynb hl-python "><pre><span></span>
 </pre></div>
-<div id="cell-16" class="clipboard-copy-txt"></div>
+<div id="cell-15" class="clipboard-copy-txt"></div>
         
         </div>
     </div>
@@ -3457,7 +3425,7 @@ class="
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   </body>

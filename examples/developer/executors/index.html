@@ -11,7 +11,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -670,8 +670,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../single_objective_bayes_opt/expected_improvement_rosenbrock/" class="md-nav__link">
-        Expected Improvement BO
+      <a href="../../single_objective_bayes_opt/expected_improvement_rosenbrock.ipynb" class="md-nav__link">
+        Expected improvement
       </a>
     </li>
   
@@ -741,7 +741,7 @@
   
     <li class="md-nav__item">
       <a href="../../single_objective_bayes_opt/bax_tutorial/" class="md-nav__link">
-        Imports and random seeding for reproducibility
+        Basic Optimization using BAX
       </a>
     </li>
   
@@ -3626,7 +3626,7 @@ loaded</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;__main__.TestClass at 0x7f6cae6afb20&gt;</pre>
+<pre>&lt;__main__.TestClass at 0x7f4f813b05e0&gt;</pre>
 </div>
 
 </div>
@@ -3830,7 +3830,7 @@ tpe_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7f6cae66eeb0 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7f4f813c28e0 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -3887,7 +3887,7 @@ tpe_exec.map(test_function, ((1, 4), (3, 4)))</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f6cae68c270&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f4f813db660&gt;</pre>
 </div>
 
 </div>
@@ -3998,7 +3998,7 @@ dask_executor.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7f6cae698b50 state=pending&gt;</pre>
+<pre>&lt;Future at 0x7f4f813df820 state=pending&gt;</pre>
 </div>
 
 </div>
@@ -4297,7 +4297,7 @@ context_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7f6ca58bd280 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7f4f781f4220 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -4352,7 +4352,7 @@ context_exec.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f6ca58b3900&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f4f7a695ac0&gt;</pre>
 </div>
 
 </div>
@@ -4470,7 +4470,7 @@ context_exec_from_json.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;Future at 0x7f6ca584f880 state=finished returned int&gt;</pre>
+<pre>&lt;Future at 0x7f4f781f4b50 state=finished returned int&gt;</pre>
 </div>
 
 </div>
@@ -4525,7 +4525,7 @@ context_exec_from_json.submit(fn=test_function, x=1, y=8)</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f6ca58b3dd0&gt;</pre>
+<pre>&lt;generator object Executor.map.&lt;locals&gt;.result_iterator at 0x7f4f781dda50&gt;</pre>
 </div>
 
 </div>
@@ -4671,7 +4671,7 @@ fn_from_json</div>
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>CallableModel(callable=&lt;function evaluate at 0x7f6ca588f9d0&gt;, signature=Kwargs_evaluate(args=[], z=None, kwarg_order=[&#39;inputs&#39;, &#39;y&#39;, &#39;z&#39;], inputs=&#39;inspect._empty&#39;, y=100))</pre>
+<pre>CallableModel(callable=&lt;function evaluate at 0x7f4f78667700&gt;, signature=Kwargs_evaluate(args=[], z=None, kwarg_order=[&#39;inputs&#39;, &#39;y&#39;, &#39;z&#39;], inputs=&#39;inspect._empty&#39;, y=100))</pre>
 </div>
 
 </div>
@@ -4793,7 +4793,7 @@ fn_from_json</div>
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   </body>
