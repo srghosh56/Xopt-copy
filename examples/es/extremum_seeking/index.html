@@ -15,7 +15,7 @@
         <link rel="next" href="../../rcds/rcds/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-9.1.19">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
@@ -2564,7 +2564,7 @@ os.environ['KMP_DUPLICATE_LIB_OK']='True'</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a1ac8bda">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=11917807">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2666,7 +2666,7 @@ warnings.filterwarnings("ignore")</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>  <span class="c1"># set deterministic run</span>
-
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">nES</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="c1"># This global dict is used as a counter to emulate drifting</span>
@@ -2699,12 +2699,12 @@ warnings.filterwarnings("ignore")</div>
     <span class="n">f_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">p</span> <span class="o">-</span> <span class="n">p_opt_i</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">noise</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
     
     <span class="n">states</span><span class="p">[</span><span class="s1">'count'</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">outcome_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'f'</span><span class="p">:</span> <span class="n">f_val</span><span class="p">,</span> <span class="s1">'p_opt'</span><span class="p">:</span> <span class="n">p_opt_i</span><span class="p">}</span>
+    <span class="n">outcome_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'f'</span><span class="p">:</span> <span class="n">f_val</span><span class="p">,</span> <span class="s1">'p_opt'</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">p_opt_i</span><span class="p">)}</span>
     
     <span class="k">return</span> <span class="n">outcome_dict</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-4">np.random.seed(42)  # set deterministic run
-
+import pandas as pd
 nES = 10
 
 # This global dict is used as a counter to emulate drifting
@@ -2737,7 +2737,7 @@ def f_ES_minimize(input_dict):
     f_val = np.sum((p - p_opt_i) ** 2) + noise[i]
     
     states['count'] += 1
-    outcome_dict = {'f': f_val, 'p_opt': p_opt_i}
+    outcome_dict = {'f': f_val, 'p_opt': pd.Series(p_opt_i)}
     
     return outcome_dict</div>
 </div>
@@ -2850,7 +2850,7 @@ X</div>
 <pre>
             Xopt
 ________________________________
-Version: 0+untagged.1.g5bf8d78
+Version: 0+untagged.1.g53057de
 Data size: 0
 Config as YAML:
 xopt: {asynch: false, strict: true, dump_file: null, max_evaluations: 5000}
@@ -2904,12 +2904,14 @@ vocs:
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># Reset global counter to guarantee deterministic optimization</span>
 <span class="n">states</span><span class="p">[</span><span class="s1">'count'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">X</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">X</span><span class="o">.</span><span class="n">random_evaluate</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-6"># Reset global counter to guarantee deterministic optimization
 states['count'] = 0
 
-X.run()</div>
+X.random_evaluate(1)
+X.step()</div>
 </div>
 </div>
 </div>
@@ -3264,12 +3266,12 @@ for i in tqdm(range(NUM_STEPS)):
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jupyter-widgets jp-OutputArea-output" id="32cf8ff1-fd17-4f00-a6e7-a661fe9f6ed7">
+<div class="jupyter-widgets jp-OutputArea-output" id="de108468-83f0-4ed0-8c30-eaf076437bfe">
 <script type="text/javascript">
-var element = document.getElementById('32cf8ff1-fd17-4f00-a6e7-a661fe9f6ed7');
+var element = document.getElementById('de108468-83f0-4ed0-8c30-eaf076437bfe');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "6885c5da47374e8aae1faa72e0197342", "version_major": 2, "version_minor": 0}
+{"model_id": "617c939ac0094ff3b97a5676fb03d72f", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 </div>
@@ -3491,7 +3493,7 @@ plt.tight_layout()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-18">
