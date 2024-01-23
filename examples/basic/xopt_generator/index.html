@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
@@ -1988,11 +1988,12 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     if (!diagrams.length) {
       return;
     }
-    const mermaid = (await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs")).default;
+    const mermaid = (await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs")).default;
     const parser = new DOMParser();
 
     mermaid.initialize({
       maxTextSize: 100000,
+      maxEdges: 100000,
       startOnLoad: false,
       fontFamily: window
         .getComputedStyle(document.body)
@@ -2367,7 +2368,7 @@ X</div>
 <pre>
             Xopt
 ________________________________
-Version: 0+untagged.1.gfba3e71
+Version: 0+untagged.1.gf180cd8
 Data size: 0
 Config as YAML:
 dump_file: null
@@ -2516,15 +2517,15 @@ for i in range(4):
 <tbody>
 <tr>
 <th>0</th>
-<td>4.619829</td>
-<td>-9.957194e-01</td>
-<td>0.000021</td>
+<td>1.264133</td>
+<td>9.533463e-01</td>
+<td>0.000016</td>
 <td>False</td>
 </tr>
 <tr>
 <th>1</th>
-<td>4.041035</td>
-<td>-7.829803e-01</td>
+<td>0.636088</td>
+<td>5.940530e-01</td>
 <td>0.000002</td>
 <td>False</td>
 </tr>
@@ -2532,28 +2533,28 @@ for i in range(4):
 <th>2</th>
 <td>6.283185</td>
 <td>-2.449294e-16</td>
-<td>0.000007</td>
+<td>0.000006</td>
 <td>False</td>
 </tr>
 <tr>
 <th>3</th>
-<td>0.000000</td>
-<td>0.000000e+00</td>
-<td>0.000007</td>
+<td>4.815700</td>
+<td>-9.946681e-01</td>
+<td>0.000014</td>
 <td>False</td>
 </tr>
 <tr>
 <th>4</th>
-<td>5.013283</td>
-<td>-9.550719e-01</td>
-<td>0.000007</td>
+<td>3.942038</td>
+<td>-7.176664e-01</td>
+<td>0.000006</td>
 <td>False</td>
 </tr>
 <tr>
 <th>5</th>
-<td>4.769024</td>
-<td>-9.983967e-01</td>
-<td>0.000007</td>
+<td>4.510559</td>
+<td>-9.797014e-01</td>
+<td>0.000005</td>
 <td>False</td>
 </tr>
 </tbody>
@@ -2686,10 +2687,10 @@ for i in range(4):
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
   </body>
