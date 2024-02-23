@@ -2477,7 +2477,7 @@ objective function takes a dictionary as input and returns a dictionary as the o
 <span class="c1"># define variables and function objectives</span>
 <span class="n">vocs</span> <span class="o">=</span> <span class="n">VOCS</span><span class="p">(</span>
     <span class="n">variables</span><span class="o">=</span><span class="p">{</span><span class="s2">"x"</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">]},</span>
-    <span class="n">objectives</span><span class="o">=</span><span class="p">{</span><span class="s2">"y1"</span><span class="p">:</span> <span class="s2">"MAXIMIZE"</span><span class="p">},</span>
+    <span class="n">observables</span><span class="o">=</span><span class="p">[</span><span class="s2">"y1"</span><span class="p">],</span>
 <span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">import math
@@ -2485,7 +2485,7 @@ objective function takes a dictionary as input and returns a dictionary as the o
 # define variables and function objectives
 vocs = VOCS(
     variables={"x": [0, 2 * math.pi]},
-    objectives={"y1": "MAXIMIZE"},
+    observables=["y1"],
 )</div>
 </div>
 </div>
@@ -2711,7 +2711,7 @@ X.data</div>
 <th>0</th>
 <td>3.543749</td>
 <td>-0.391403</td>
-<td>0.000018</td>
+<td>0.000017</td>
 <td>False</td>
 </tr>
 <tr>
@@ -2725,7 +2725,7 @@ X.data</div>
 <th>2</th>
 <td>2.829554</td>
 <td>0.306999</td>
-<td>0.000002</td>
+<td>0.000001</td>
 <td>False</td>
 </tr>
 </tbody>
@@ -3025,7 +3025,7 @@ X.data</div>
 <th>0</th>
 <td>3.543749</td>
 <td>-0.391403</td>
-<td>0.000018</td>
+<td>0.000017</td>
 <td>False</td>
 </tr>
 <tr>
@@ -3039,14 +3039,14 @@ X.data</div>
 <th>2</th>
 <td>2.829554</td>
 <td>0.306999</td>
-<td>0.000002</td>
+<td>0.000001</td>
 <td>False</td>
 </tr>
 <tr>
 <th>3</th>
 <td>4.103268</td>
 <td>-0.820151</td>
-<td>0.000008</td>
+<td>0.000007</td>
 <td>False</td>
 </tr>
 <tr>
@@ -3067,7 +3067,7 @@ X.data</div>
 <th>6</th>
 <td>4.762932</td>
 <td>-0.998723</td>
-<td>0.000008</td>
+<td>0.000007</td>
 <td>False</td>
 </tr>
 <tr>
