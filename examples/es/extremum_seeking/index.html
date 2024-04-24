@@ -654,6 +654,8 @@
       
         
       
+        
+      
     
     
       
@@ -696,8 +698,6 @@
       
         
       
-        
-      
     
     
       
@@ -715,7 +715,7 @@
             
   
   <span class="md-ellipsis">
-    Bayesian Exploration
+    Gaussian Process Model Creation
   </span>
   
 
@@ -724,6 +724,79 @@
         
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Gaussian Process Model Creation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gp_model_creation/model_creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Bayesian Exploration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
             <span class="md-nav__icon md-icon"></span>
             Bayesian Exploration
           </label>
@@ -822,10 +895,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
         
           
-          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -836,8 +909,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_3">
             <span class="md-nav__icon md-icon"></span>
             Single Objective Bayesian Optimization
           </label>
@@ -1128,10 +1201,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_4_2_3" id="__nav_4_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1142,8 +1215,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4">
             <span class="md-nav__icon md-icon"></span>
             Multi-Objective Bayesian Optimization
           </label>
@@ -2535,7 +2608,7 @@ import os
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c744f84b">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=222723d0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -2820,7 +2893,7 @@ X</div>
 <pre>
             Xopt
 ________________________________
-Version: 0+untagged.1.g76d4af6
+Version: 0+untagged.1.ge872ea5
 Data size: 0
 Config as YAML:
 dump_file: null
@@ -3265,12 +3338,12 @@ for i in tqdm(range(NUM_STEPS)):
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jupyter-widgets jp-OutputArea-output" id="79bcd8f0-f905-4445-bcb1-29d30153a1f5" tabindex="0">
+<div class="jupyter-widgets jp-OutputArea-output" id="5501da17-11c0-41ad-9980-373be3023a20" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('79bcd8f0-f905-4445-bcb1-29d30153a1f5');
+var element = document.getElementById('5501da17-11c0-41ad-9980-373be3023a20');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "f24f622d0244419f9eba38ab30e78efc", "version_major": 2, "version_minor": 0}
+{"model_id": "fac685ad398a4bc499cbc982b2c271da", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 </div>
