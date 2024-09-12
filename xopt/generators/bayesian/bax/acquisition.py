@@ -2,7 +2,7 @@ import torch
 from botorch.acquisition.multi_objective.analytic import (
     MultiObjectiveAnalyticAcquisitionFunction,
 )
-from botorch.models.model import Model, ModelList
+from botorch.models.model import ModelList
 from botorch.utils.transforms import t_batch_mode_transform
 from torch import Tensor
 
@@ -25,7 +25,7 @@ class ModelListExpectedInformationGain(MultiObjectiveAnalyticAcquisitionFunction
             model: A fitted independent multi-output (ModelList) model.
     """
 
-    def __init__(self, model: Model, algorithm: Algorithm, bounds: Tensor) -> None:
+    def __init__(self, model: ModelList, algorithm: Algorithm, bounds: Tensor) -> None:
         super().__init__(model=model)
         self.algorithm = algorithm
 
@@ -37,7 +37,7 @@ class ModelListExpectedInformationGain(MultiObjectiveAnalyticAcquisitionFunction
         ) = self.algorithm.get_execution_paths(self.model, bounds)
 
         # Need to call the model on some data before we can condition_on_observations
-        self.model(*[self.xs_exe[:1, 0:1, 0:] for m in model.models])
+        self.model(*[self.xs_exe[:1, 0:1, 0:] for _ in model.models])
 
         # construct a batch of size n_samples fantasy models,
         # where each fantasy model is produced by taking the model
